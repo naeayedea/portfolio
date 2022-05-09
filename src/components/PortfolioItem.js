@@ -21,7 +21,8 @@ class PortfolioItem extends Component {
                     <img src={this.props.image} alt={this.props.alt} className={"folioImage"} />
                 </div>
                 <div className={"content"}>
-                    {this.props.content}
+                    {this.props.content.split('\n').map(paragraph => {return (<>{paragraph}<br/></>)})}
+                    <br/><p><a href={this.props.url} target={"_blank"}>{this.props.linkName}</a></p>
                 </div>
             </div>
         )
