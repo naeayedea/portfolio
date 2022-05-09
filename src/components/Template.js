@@ -15,7 +15,7 @@ class Template extends Component {
             <>
                 {/*Title text*/}
                 <div id={"title"}>
-                    {this.props.title}
+
                 </div>
                 {/*Content of the page passed through by props */}
                 <div id={"content"}>

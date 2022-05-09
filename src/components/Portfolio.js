@@ -3,12 +3,6 @@ import Template from './Template'
 import Item from './PortfolioItem'
 import data from './../content/data/foliodata.json'
 import './../styles/folio.css'
-// import image from '../../public/images/bostonmetro.png'
-global.Buffer = global.Buffer || require('buffer').Buffer
-
-let HOME = './../../'
-
-// let data = JSON.parse(dataFile);
 
 class Portfolio extends Component {
 
@@ -31,16 +25,5 @@ class Portfolio extends Component {
         )
     }
 }
-
-
-// const getImageData = async (image) => {
-//     const fileReader = new FileReader();
-//     new FileReader().onload = () => {
-//         return fileReader.result;
-//     }
-//     fileReader.readAsDataURL(image)
-//
-//     //return new Buffer.from(FileReader.readAsDataURL(image)).toString("base64");
-// }
 
 export default Portfolio

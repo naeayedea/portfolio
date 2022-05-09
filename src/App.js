@@ -15,10 +15,12 @@ class App extends Component {
         return (
             <>
                 {/*Title*/}
-                <div id={"site-title"} >
-                    <Link to={"."+HOME} id={"home-link"}>
-                        <h1>Steven Muirhead</h1>
-                    </Link>
+                <div id={"top-banner"}>
+                    <div id={"site-title"} >
+                        <Link to={"."+HOME} id={"home-link"}>
+                            <h1>Steven Muirhead</h1>
+                        </Link>
+                    </div>
                 </div>
                 {/*Nav Bar*/}
                 <Nav parent={this} />
@@ -56,7 +58,9 @@ const LinkButton = (props) => {
     return (
         <Link to={"."+HOME+props.name}>
             <button className={"buttonLink"} onClick={props.onClick}>
-                {props.displayName}
+                <h1>
+                    {props.displayName}
+                </h1>
             </button>
         </Link>
 
