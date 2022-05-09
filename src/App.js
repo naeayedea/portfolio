@@ -8,9 +8,6 @@ const HOME = "/";
 class App extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            visible: false
-        }
     }
 
     render() {
@@ -25,7 +22,7 @@ class App extends Component {
                 {/*Nav Bar*/}
                 <Nav parent={this} />
                 {/*Page Content*/}
-                <div id={"main-div"} onClick={() => {if (this.state.visible) this.setVisible(false)}}>
+                <div id={"main-div"}>
                     <Routes>
                         <Route exact path={HOME} element={<Home/>} />
                         <Route exact path={HOME+"portfolio"} element={<Portfolio/>} />
@@ -40,40 +37,18 @@ class App extends Component {
         )
     }
 
-    setVisible = (newState) => {
-        this.setState ( {
-            visible: newState
-        });
-    }
-
-    invertVisible = () => {
-        this.setVisible(!this.state.visible);
-    }
 }
 
-const Nav = (props) => {
-    let parent = props.parent;
-    let invertVisible = parent.invertVisible;
-    if (parent.state.visible) {
-        return (
-            <div id="nav-bar" className={"nav"}>
-                <div id={"nav-container"}>
-                    <button id={"hamburger"} onClick={invertVisible}>≡</button>
-                    <div id={"nav-buttons"}>
-                        <LinkButton onClick={invertVisible} name={""} displayName={"Home"}/>
-                        <LinkButton onClick={invertVisible} name={"portfolio"} displayName={"My Work"}/>
-                        <LinkButton onClick={invertVisible} name={"contact"} displayName={"Contact"}/>
-                    </div>
-                </div>
+const Nav = () => {
+    return (
+        <div id="nav-bar" className={"nav"}>
+            <div id={"nav-buttons"}>
+                <LinkButton name={""} displayName={"Home"}/>
+                <LinkButton name={"portfolio"} displayName={"My Work"}/>
+                <LinkButton name={"contact"} displayName={"Contact"}/>
             </div>
-        )
-    } else {
-        return (
-            <div id={"nav-bar-off"} className={"nav"}>
-                <button id={"hamburger"} onClick={invertVisible}>≡</button>
-            </div>
-        )
-    }
+        </div>
+    )
 }
 
 const LinkButton = (props) => {
