@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import Template from "./Template";
 
 class PortfolioItem extends Component {
 
