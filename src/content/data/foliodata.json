@@ -7,8 +7,13 @@
     "linkName": "Javadocs",
     "url": "https://devweb2021.cis.strath.ac.uk/~ylb17138/308/build/docs/javadoc/"
   },  {
+    "title": "Embedded C Application (2022)",
+    "content": "For the purposes of completing my degree, I took part in a group project to come up with, design and implement a hardware and software system that could demonstrate a key engineering principle. As a group we decided upon a simple tachometer which could demonstrate principles of measurement and control theory.\n\nI was responsible for the firmware in the project which received input from the PCB and converted the signals into a readable RPM for the user. I implemented a serial bluetooth command handler which stored characters in an array and utilised a map of strings to void function pointers which were ran when the correct string was received. The code for this ISR can be found to the right.\n\nThe firmware was relatively complex, needing to take into account the slow clock speed of the processor which was particularly interesting as the code had to be as efficient as possible to ensure rapid response times for interrupts whilst constantly supplying an attached mobile application with up to date RPM information. This project improved my understanding of C programming - particularly within low powered embedded systems.  ",
+    "image": "./images/embedded.png",
+    "alt": "A code listing showing an example of an interrupt service routine used within the embedded microcontroller code"
+  },  {
     "title": "Discord Bot (2019 - present)",
-    "content": "",
+    "content": "Since 2019, I have continued to develop and improve upon a general purpose discord bot. I have used the bot primarily as a method of improving my programming skills and it was first real project that I worked on. The bot code is event driven, utilising an API from the discord endpoint. ",
     "image": "./images/keith.png",
     "alt": "Examples of bot commands including reminders, pins and feedback. "
   },  {
@@ -16,11 +21,6 @@
     "content": "",
     "image": "./images/shell.png",
     "alt": "Examples of linux shell features such as aliases, running external commands and history invocations"
-  },  {
-    "title": "Embedded C Application (2022)",
-    "content": "",
-    "image": "./images/embedded.png",
-    "alt": "A code listing showing an example of an interrupt service routine used within the embedded microcontroller code"
   },  {
     "title": "Web Design using React (2021-2022)",
     "content": "",
