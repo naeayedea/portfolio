@@ -21,6 +21,9 @@ a:hover {
     opacity: 0.7;
 }
 
+.folio-item a {
+    color: #435f8c;
+}
 
 @media screen and (max-width: 900px) {
     * {
@@ -59,6 +62,12 @@ a:hover {
     padding: 1vh;
     box-sizing: border-box;
     width: fit-content;
+
+}
+
+#top-banner {
+    display: flex;
+    justify-content: center;
 }
 
 .nav {
