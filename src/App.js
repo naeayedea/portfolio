@@ -6,6 +6,7 @@ import Contact from "./components/Contact.js";
 const HOME = "/";
 
 class App extends Component {
+
     constructor(props) {
         super(props);
     }
