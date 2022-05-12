@@ -36,6 +36,13 @@ a:hover {
 
 }
 
+/*Handle the case with very wide zoomed in screens*/
+@media screen and (max-width: 900px) and (max-height: 400px) {
+    #home-link h1 {
+        font-size: max(2vw, 2vh)
+    }
+}
+
 ::-webkit-scrollbar {
     width: max(1vw, 2vh);
 }
