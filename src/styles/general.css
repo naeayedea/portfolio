@@ -6,6 +6,10 @@
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
+.externalLink {
+    color: #435f8c !important;
+}
+
 body {
     background-color: #1d2029;
     /*background-color: #173161;*/
@@ -19,10 +23,6 @@ a, a:visited, a:active {
 
 a:hover {
     opacity: 0.7;
-}
-
-.folio-item a {
-    color: #435f8c;
 }
 
 @media screen and (max-width: 900px) {

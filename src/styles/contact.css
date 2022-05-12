@@ -1,0 +1,12 @@
+.simple-list {
+    list-style-type: none;
+}
+
+.logo-link img {
+    height: 2vh;
+    width:auto;
+}
+
+.logo-link a {
+    color: #435f8c;
+}

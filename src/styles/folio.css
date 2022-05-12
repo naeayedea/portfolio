@@ -12,6 +12,7 @@
 #work-container {
     -ms-overflow-style: none;  /* IE and Edge */
 }
+
 .folio-item {
     display: grid;
     grid-gap: 1vw;
