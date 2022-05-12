@@ -19,7 +19,7 @@ class Portfolio extends Component {
         return (
             <Template title={<h1>Portfolio</h1>} content ={
                 <div id={"work-container"}>
-                    {data.map((entry) => {left=!left; return (<Item key={entry.title} title={entry.title} image={entry.image} alt={entry.alt} content={entry.content} linkName={entry.linkName} url={entry.url} pos={left ? "pos-left" : "pos-right"}/>)})}
+                    {data.map((entry) => {left=!left; return (<Item key={entry.title+"container"} title={entry.title} image={entry.image} alt={entry.alt} content={entry.content} linkName={entry.linkName} url={entry.url} pos={left ? "pos-left" : "pos-right"}/>)})}
                 </div>
             } />
         )

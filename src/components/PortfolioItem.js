@@ -11,13 +11,14 @@ class PortfolioItem extends Component {
     }
 
     render() {
+        let i = 0;
         return (
-            <div className={"folio-item "+this.props.pos}>
-                <div className={"title"}>
+            <div key={this.props.title} className={"folio-item "+this.props.pos}>
+                <div key={this.props.title+"title"} className={"title"}>
                     {this.props.title}
                 </div>
-                <div className={"folioImage"}>
-                    <img src={this.props.image} alt={this.props.alt} className={"folioImage"} />
+                <div key={this.props.title+"image"} className={"folioImage"}>
+                    <img src={process.env.PUBLIC_URL+this.props.image} alt={this.props.alt} className={"folioImage"} />
                 </div>
                 <div className={"content"}>
                     {this.props.content.split('\n').map(paragraph => {return (<>{paragraph}<br/></>)})}
