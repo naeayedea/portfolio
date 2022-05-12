@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import ExternalLink from './ExternalLink'
 
 class PortfolioItem extends Component {
 
@@ -20,9 +21,9 @@ class PortfolioItem extends Component {
                 <div key={this.props.title+"image"} className={"folioImage"}>
                     <img src={process.env.PUBLIC_URL+this.props.image} alt={this.props.alt} className={"folioImage"} />
                 </div>
-                <div className={"content"}>
-                    {this.props.content.split('\n').map(paragraph => {return (<>{paragraph}<br/></>)})}
-                    <br/><p><a href={this.props.url} target={"_blank"}>{this.props.linkName}</a></p>
+                <div key={this.props.title+"content"} className={"content"}>
+                    {this.props.content.split('\n').map(paragraph => {return (<p key={this.props.title+"paragraph"+i++}>{paragraph}<br/></p>)})}
+                    <br/><p><ExternalLink href={this.props.url} target={"_blank"} rel={"noreferrer"} content={this.props.linkName} /></p>
                 </div>
             </div>
         )
