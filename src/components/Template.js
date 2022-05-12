@@ -7,7 +7,6 @@ class Template extends Component {
     }
 
     componentDidMount() {
-        console.log("mounted")
     }
 
     render() {

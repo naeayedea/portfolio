@@ -2,39 +2,39 @@
   {
     "title": "Boston Metro System (2022)",
     "content": "For this group project we were tasked with modelling the boston metro system with a backend that utilised a MultiGraph whilst abstracting specifics of the implementation through an API with a strict specification which was used by the GUI shown to the right.\n\nI was fully responsible for specifying, implementing and testing the MultiGraph code to a high quality which received excellent feedback from teaching staff. I made proper use of interface, generics and inheritance to produce a robust implementation which the rest of the system relied on.\n\nOverall, this project was a very enjoyable experience and I feel that I was able to make a full use of my programming skills, particularly with algorithms and utilising functional aspects of Java. You can view the javadocs for the final project at the following link:  ",
-    "image": "./images/bostonmetro.png",
+    "image": "/images/bostonmetro.png",
     "alt": "Display of GUI depicting the Boston Metro System as part of the group project. There is a map of the system with a clock and route information",
     "linkName": "Javadocs",
     "url": "https://devweb2021.cis.strath.ac.uk/~ylb17138/308/build/docs/javadoc/"
   },  {
     "title": "Embedded C Application (2022)",
     "content": "For the purposes of completing my degree, I took part in a group project to come up with, design and implement a hardware and software system that could demonstrate a key engineering principle. As a group we decided upon a simple tachometer which could demonstrate principles of measurement and control theory.\n\nI was responsible for the firmware in the project which received input from the PCB and converted the signals into a readable RPM for the user. I implemented a serial bluetooth command handler which stored characters in an array and utilised a map of strings to void function pointers which were ran when the correct string was received. The code for this ISR can be found to the right.\n\nThe firmware was relatively complex, needing to take into account the slow clock speed of the processor which was particularly interesting as the code had to be as efficient as possible to ensure rapid response times for interrupts whilst constantly supplying an attached mobile application with up to date RPM information. This project improved my understanding of C programming - particularly within low powered embedded systems.  ",
-    "image": "./images/embedded.png",
+    "image": "/images/embedded.png",
     "alt": "A code listing showing an example of an interrupt service routine used within the embedded microcontroller code"
   },  {
     "title": "Discord Bot (2019 - present)",
     "content": "Since 2019, I have continued to develop and improve upon a general purpose discord bot. I have used the bot primarily as a method of improving my programming skills and it was first real project that I worked on. The bot code is event driven, utilising an API from the discord endpoint. ",
-    "image": "./images/keith.png",
+    "image": "/images/keith.png",
     "alt": "Examples of bot commands including reminders, pins and feedback. "
   },  {
     "title": "Simple Linux Shell (2020)",
     "content": "",
-    "image": "./images/shell.png",
+    "image": "/images/shell.png",
     "alt": "Examples of linux shell features such as aliases, running external commands and history invocations"
   },  {
     "title": "Web Design using React (2021-2022)",
     "content": "",
-    "image": "./images/webapp.png",
+    "image": "/images/webapp.png",
     "alt": "A screenshot of a website showing a side menu with eight paintings of different styles in a grid layout"
   },  {
     "title": "Haskell CSV Query Language (2021)",
     "content": "",
-    "image": "./images/haskell.png",
+    "image": "/images/haskell.png",
     "alt": "Results from running a csv query from the project showing features that the final product had"
   },  {
     "title": "Java Thread Monitor (2021)",
     "content": "",
-    "image": "./images/threadmonitor.png",
+    "image": "/images/threadmonitor.png",
       "alt": "A screenshot of the thread monitor project with several dummy threads with the base JVM threads shown with various pieces of information"
   }
 ]
