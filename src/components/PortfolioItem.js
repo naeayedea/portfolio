@@ -23,7 +23,10 @@ class PortfolioItem extends Component {
                 </div>
                 <div key={this.props.title+"content"} className={"content"}>
                     {this.props.content.split('\n').map(paragraph => {return (<p key={this.props.title+"paragraph"+i++}>{paragraph}<br/></p>)})}
-                    <br/><p><ExternalLink href={this.props.url} target={"_blank"} rel={"noreferrer"} content={this.props.linkName} /></p>
+                    <br/>
+                    <p>
+                        {this.props.links.map(link => <>    |   <ExternalLink href={link.url} target={"_blank"} rel={"noreferrer"} content={link.linkName} key={link.linkName+"url"}/></>)}
+                    </p>
                 </div>
             </div>
         )
