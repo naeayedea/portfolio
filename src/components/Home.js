@@ -15,7 +15,6 @@ class Home extends Component {
             <Template title={<h1>Home</h1>} content ={
                 <>
                     <div>
-                        <h1>Steven Muirhead</h1>
                         <p>This website serves as a record of my notable projects and work. The section 'My Work' contains in depth information on the things I have been involved in at university and personal projects</p>
                         <p>Please do not hesitate to contact me for work opportunities or further information! </p>
                     </div>
@@ -25,6 +24,25 @@ class Home extends Component {
                         <p>The basics are implemented, I will be adding content in the coming weeks</p>
                     </div>
                     <br/>
+                    <div>
+                        <h1>About Me</h1>
+                        <p> </p>
+                    </div>
+                    <br/>
+                    <div>
+                        <h1>Soft Skills</h1>
+                        <p> </p>
+                    </div>
+                    <br/>
+                    <div>
+                        <h1>Education</h1>
+                        <p> </p>
+                    </div>
+                    <br/>
+                    <div>
+                        <h1>Motivations</h1>
+                        <p> </p>
+                    </div>
                 </>
             } />
         )
