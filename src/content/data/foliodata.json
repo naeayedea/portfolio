@@ -1,7 +1,7 @@
 [
   {
     "title": "Boston Metro System (2022)",
-    "content": "For this group project we were tasked with modelling the boston metro system with a backend that utilised a MultiGraph whilst abstracting specifics of the implementation through an API with a strict specification which was used by the GUI shown to the right.\n\nI was fully responsible for specifying, implementing and testing the MultiGraph code to a high quality which received excellent feedback from teaching staff. I made proper use of interface, generics and inheritance to produce a robust implementation which the rest of the system relied on.\n\nOverall, this project was a very enjoyable experience and I feel that I was able to make a full use of my programming skills, particularly with algorithms and utilising functional aspects of Java. You can view the javadocs for the final project at the following link:  ",
+    "content": "For this group project we were tasked with modelling the boston metro system with a backend that utilised a MultiGraph whilst abstracting specifics of the implementation through an API with a strict specification which was used by the GUI shown in the image.\n\nI was fully responsible for specifying, implementing and testing the MultiGraph code to a high quality which received excellent feedback from teaching staff. I made proper use of interface, generics and inheritance to produce a robust implementation which the rest of the system relied on.\n\nOverall, this project was a very enjoyable experience and I feel that I was able to make a full use of my programming skills, particularly with algorithms and utilising functional aspects of Java. You can view the javadocs for the final project at the following link:  ",
     "image": "/images/bostonmetro.png",
     "alt": "Display of GUI depicting the Boston Metro System as part of the group project. There is a map of the system with a clock and route information",
     "links": [
@@ -12,7 +12,7 @@
     ]
   },  {
     "title": "Embedded C Application (2022)",
-    "content": "For the purposes of completing my degree, I took part in a group project to come up with, design and implement a hardware and software system that could demonstrate a key engineering principle. As a group we decided upon a simple tachometer which could demonstrate principles of measurement and control theory.\n\nI was responsible for the firmware in the project which received input from the PCB and converted the signals into a readable RPM for the user. I implemented a serial bluetooth command handler which stored characters in an array and utilised a map of strings to void function pointers which were ran when the correct string was received. The code for this ISR can be found to the right.\n\nThe firmware was relatively complex, needing to take into account the slow clock speed of the processor which was particularly interesting as the code had to be as efficient as possible to ensure rapid response times for interrupts whilst constantly supplying an attached mobile application with up to date RPM information. This project improved my understanding of C programming - particularly within low powered embedded systems.  ",
+    "content": "For the purposes of completing my degree, I took part in a group project to come up with, design and implement a hardware and software system that could demonstrate a key engineering principle. As a group we decided upon a simple tachometer which could demonstrate principles of measurement and control theory.\n\nI was responsible for the firmware in the project which received input from the PCB and converted the signals into a readable RPM for the user. I implemented a serial bluetooth command handler which stored characters in an array and utilised a map of strings to void function pointers which were ran when the correct string was received. The code for this ISR can be found in the image.\n\nThe firmware was relatively complex, needing to take into account the slow clock speed of the processor which was particularly interesting as the code had to be as efficient as possible to ensure rapid response times for interrupts whilst constantly supplying an attached mobile application with up to date RPM information. This project improved my understanding of C programming - particularly within low powered embedded systems.  ",
     "image": "/images/embedded.png",
     "alt": "A code listing showing an example of an interrupt service routine used within the embedded microcontroller code",
     "links": [
@@ -55,7 +55,7 @@
     ]
   },  {
     "title": "Haskell CSV Query Language (2021)",
-    "content": "TBA",
+    "content": "I am extremely passionate about programming and I love learning new and interesting ways to write software. In third year, I had the option of choosing the class 'Functional Programming' which involved creating a CSV query language over several months after becoming familiar with Haskell concepts.\n\nI was supplied with an incomplete system that defined various parsers and empty functions. I chose to expand this system to take on an SQL-like syntax where the user could input a query and the system would evaluate it and return the results.\n\nExample queries are shown in the image, my final submission received respectable marks due to my custom testing framework and complete documentation.",
     "image": "/images/haskell.png",
     "alt": "Results from running a csv query from the project showing features that the final product had",
     "links": [
@@ -63,7 +63,7 @@
     ]
   },  {
     "title": "Java Thread Monitor (2021)",
-    "content": "TBA",
+    "content": "This simple project was used to gain an appreciation of threading in Java, the tool ran on it's own thread and systematically retrieved information about other threads that were currently active. The thread monitor helped to understand concurrency issues as it was possible for threads to finish execution whilst the tool was retrieving information so synchronisation was important\n\nAs it was a relatively simple task, I choose to focus on the usability aspect of the GUI more, including several hotkeys, filtering by thread or group name and implementing a pause button. The colouring shown in the image was decided by hashing the group name and converting that to RGB values. The colours were then constrained to a luminosity range to ensure readability of the text.\n\nOverall, this project was very fun to undertake as it let me explore both threading and further improve my UX skills.",
     "image": "/images/threadmonitor.png",
     "alt": "A screenshot of the thread monitor project with several dummy threads with the base JVM threads shown with various pieces of information",
     "links": [
