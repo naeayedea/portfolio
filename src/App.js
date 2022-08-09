@@ -28,7 +28,7 @@ class App extends Component {
                 <div id={"main-div"}>
                     <Routes>
                         <Route exact path={HOME} element={<Home/>} />
-                        <Route exact path={HOME+"portfolio"} element={<Portfolio/>} />
+                        <Route exact path={HOME+"work"} element={<Portfolio/>} />
                         <Route exact path={HOME+"contact"} element={<Contact/>} />
                     </Routes>
                 </div>
@@ -47,7 +47,7 @@ const Nav = () => {
         <div id="nav-bar" className={"nav"}>
             <div id={"nav-buttons"}>
                 <LinkButton name={""} displayName={"Home"}/>
-                <LinkButton name={"portfolio"} displayName={"My Work"}/>
+                <LinkButton name={"work"} displayName={"My Work"}/>
                 <LinkButton name={"contact"} displayName={"Contact"}/>
             </div>
         </div>
