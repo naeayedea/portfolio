@@ -2,6 +2,10 @@
     list-style-type: none;
 }
 
+.logo-link {
+    padding-top: 0.25vw;
+}
+
 .logo-link img {
     height: 2vh;
     width:auto;

@@ -17,18 +17,20 @@ class Contact extends Component {
             <Template title={<h1>Contact</h1>} content ={
                 <>
                     <div id={"personal-details"}>
-                        <h3>Personal Details</h3>
+                        <h3>Method of Contact</h3>
                         <p>
-                            If you wish to contact me about work or internship opportunities, please use the following details in order of preference:
+                            If you wish to contact me about work or internship opportunities, please do not hesitate to contact me via LinkedIn
                         </p>
-                        <ul className={"simple-list"}>
-                            <li key={"email"}>
-                                Email -
-                            </li>
-                            <li key={"mobile"}>
-                                Mobile -
-                            </li>
-                        </ul>
+                    </div>
+                    <br/>
+                    <div id={"linkedin"}>
+                        <h3>
+                            LinkedIn
+                        </h3>
+                        <p className={"logo-link"}>
+                            <ExternalLink href="https://www.linkedin.com/in/stevenmuirhead/" content={<><img src="https://brand.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg" alt="LinkedIn Logo"/>https://www.linkedin.com/in/stevenmuirhead/</>}/>
+
+                        </p>
                     </div>
                     <br/>
                     <div id={"github"}>
@@ -40,11 +42,7 @@ class Contact extends Component {
                             <ExternalLink href="https://github.com/naeayedea" content={<><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub logo"/> https://github.com/naeayedea</>}/>
                         </p>
                     </div>
-                    <br/>
-                    <div id={"linkedin"}>
 
-                    </div>
-                    <br/>
                     <div id={""}>
 
                     </div>
