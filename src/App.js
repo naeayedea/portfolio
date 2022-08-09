@@ -3,6 +3,7 @@ import {Routes, Route, Link} from "react-router-dom";
 import Home from "./components/Home.js";
 import Portfolio from "./components/Portfolio.js";
 import Contact from "./components/Contact.js";
+import ExternalLink from "./components/ExternalLink.js";
 const HOME = "/";
 
 class App extends Component {
@@ -34,7 +35,7 @@ class App extends Component {
                 </div>
                 {/*Footer Content*/}
                 <div id={"footer"} >
-                    <p>This is some footer content</p>
+                    <p>Website designed and implemented by Steven Muirhead | <ExternalLink href={"https://github.com/naeayedea"} content={"GitHub"}/> | <ExternalLink href={"https://www.linkedin.com/in/stevenmuirhead/"} content={"LinkedIn"}/></p>
                 </div>
             </>
         )
