@@ -6,6 +6,10 @@
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
+#main-container {
+    overflow-y: auto;
+}
+
 .externalLink {
     color: #435f8c !important;
 }

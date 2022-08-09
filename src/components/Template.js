@@ -12,13 +12,15 @@ class Template extends Component {
     render() {
         return (
             <>
-                {/*Title text*/}
-                <div id={"title"}>
+                <div id={"main-container"}>
+                    {/*Title text*/}
+                    <div id={"title"}>
 
-                </div>
-                {/*Content of the page passed through by props */}
-                <div id={"content"}>
-                    {this.props.content}
+                    </div>
+                    {/*Content of the page passed through by props */}
+                    <div id={"content"}>
+                        {this.props.content}
+                    </div>
                 </div>
             </>
         );
