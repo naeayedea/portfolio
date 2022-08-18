@@ -28,7 +28,7 @@ class Contact extends Component {
                             LinkedIn
                         </h3>
                         <p className={"logo-link"}>
-                            <ExternalLink href="https://www.linkedin.com/in/stevenmuirhead/" content={<><img src="https://brand.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg" alt="LinkedIn Logo"/>https://www.linkedin.com/in/stevenmuirhead/</>}/>
+                            <ExternalLink href="https://www.linkedin.com/in/stevenmuirhead/" content={<><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn Logo"/> https://www.linkedin.com/in/stevenmuirhead/</>}/>
 
                         </p>
                     </div>
