@@ -1,4 +1,8 @@
 #work-container {
+    font-size: min(2vw, 2vh);
+}
+
+#work-container {
     display: grid;
     grid-template-columns: auto;
     overflow-x: hidden;
@@ -39,6 +43,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.folio-item .folioImage img:hover {
+    cursor:pointer;
+
 }
 
 .imageDialog {
