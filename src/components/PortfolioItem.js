@@ -1,5 +1,6 @@
-import React, {Component} from "react";
+import React, {Component} from 'react';
 import ExternalLink from './ExternalLink'
+import DialogImage from './DialogImage'
 
 class PortfolioItem extends Component {
 
@@ -19,7 +20,7 @@ class PortfolioItem extends Component {
                     {this.props.title}
                 </div>
                 <div key={this.props.title+"image"} className={"folioImage"}>
-                    <img src={process.env.PUBLIC_URL+this.props.image} alt={this.props.alt} className={"folioImage"} />
+                    <DialogImage src={process.env.PUBLIC_URL+this.props.image} alt={this.props.alt} className={"folioImage"} />
                 </div>
                 <div key={this.props.title+"content"} className={"content"}>
                     {this.props.content.split('\n').map(paragraph => {return (<p key={this.props.title+"paragraph"+i++}>{paragraph}<br/></p>)})}

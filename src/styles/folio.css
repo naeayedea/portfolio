@@ -41,6 +41,30 @@
     align-items: center;
 }
 
+.imageDialog {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(55, 55, 55, 0.5);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: none;
+}
+
+.imageDialogContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.imageDialog img {
+    height: auto;
+    width: 40%;
+}
+
 /*small screens e.g. mobile*/
 @media screen and (max-width: 900px) {
     #work-container {
@@ -68,6 +92,11 @@
         height: 98%;
         width: 98%;
         padding: 1%;
+    }
+
+    .imageDialog img {
+        height: auto;
+        width: 90% !important;
     }
 }
 
