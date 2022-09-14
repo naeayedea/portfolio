@@ -3,6 +3,7 @@
     display: grid;
     grid-template-columns: auto;
     overflow-x: hidden;
+    overflow-y: scroll;
     height: 100%;
     width: 100%;
     grid-gap: 5vh;
@@ -159,13 +160,6 @@
 
     #home-link h1 {
         font-size: min(4vw, 4vh)
-    }
-
-    .pos-left {
-    }
-
-    .pos-right {
-
     }
 
     .folio-item .title {
