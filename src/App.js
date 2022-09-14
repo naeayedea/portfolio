@@ -1,17 +1,12 @@
-import React, {Component} from 'react'
+import React from 'react'
 import {Routes, Route, Link} from "react-router-dom";
 import Home from "./components/Home.js";
 import Portfolio from "./components/Portfolio.js";
 import Contact from "./components/Contact.js";
 const HOME = "/";
 
-class App extends Component {
 
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
+const App = () => {
         return (
             <>
                 {/*Title*/}
@@ -38,8 +33,6 @@ class App extends Component {
                 </div>
             </>
         )
-    }
-
 }
 
 const Nav = () => {

@@ -2,17 +2,8 @@ import React, {Component} from "react";
 import Template from './Template'
 import ExternalLink from './ExternalLink'
 import './../styles/contact.css'
-class Contact extends Component {
 
-    constructor(props) {
-        super(props);
-    }
-
-    componentDidMount() {
-
-    }
-
-    render() {
+const Contact = () => {
         return (
             <Template title={<h1>Contact</h1>} content ={
                 <>
@@ -49,7 +40,6 @@ class Contact extends Component {
                 </>
             } />
         )
-    }
 }
 
 export default Contact
