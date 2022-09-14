@@ -8,6 +8,7 @@
 p {
     text-align: justify;
     text-justify: inter-word;
+    font-size: 1.2em;
 }
 
 #main-container {
@@ -26,6 +27,10 @@ body {
 a, a:visited, a:active {
     color: inherit;
     text-decoration: none;
+}
+
+.link {
+    color: #8d96b083 !important;
 }
 
 a:hover {
