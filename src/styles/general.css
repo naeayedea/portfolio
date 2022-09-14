@@ -5,12 +5,9 @@
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
-#nav-bar h1 {
-    font-size: min(2vw, 2vh);
-}
-
 p {
-    font-size: min(2vw, 2vh);
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 #main-container {
@@ -36,14 +33,17 @@ a:hover {
 }
 
 @media screen and (max-width: 900px) {
-    * {
-        font-size: min(5vw, 2.5vh);
-    }
 
     #home-link h1 {
         font-size: max(4vw, 4vh)
     }
 
+}
+
+@media screen and (min-aspect-ratio: 21/9) {
+    p {
+        font-size: min(2vw, 2vh);
+    }
 }
 
 /*Handle the case with very wide zoomed in screens*/
@@ -70,9 +70,6 @@ a:hover {
     background: #a3a3a3;
 }
 
-#top-banner {
-    /*background-color: #262b38;*/
-}
 
 #site-title {
     height: 8vh;
@@ -88,7 +85,6 @@ a:hover {
 }
 
 .nav {
-    /*background-color: #262b38;*/
     height: 5vh;
     padding: 0.5vh;
     box-sizing: border-box;
@@ -119,7 +115,6 @@ a:hover {
     box-sizing: border-box;
     width: 96%;
     margin-left: 2%;
-    /*margin-right: 2%;*/
 }
 
 #footer {
