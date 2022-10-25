@@ -1,0 +1,25 @@
+:root {
+    --primaryCol: black;
+    --backgroundCol: white;
+    --linkCol: #1E6AE1;
+    --opacityFactor: 0.7;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primaryCol: #01fba7DD;
+        --secondaryCol: #4BD5E7CC;
+        --backgroundCol: #212121;
+        color: #DDDDDD;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --primaryCol: #01fba7DD;
+        --secondaryCol: #4BD5E7CC;
+
+        --backgroundCol: #212121;
+        color: white;
+    }
+}

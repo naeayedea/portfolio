@@ -1,0 +1,63 @@
+#top-banner {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px 20px 0;
+}
+
+hr {
+    margin: 0 0 1vh;
+    width: 90%;
+    border-top: 4px solid var(--primaryCol);
+    border-left: 4px solid var(--primaryCol);
+    border-right: 20px solid var(--backgroundCol);
+    border-bottom: 1px solid var(--backgroundCol);
+    border-radius: 4px 0 0 0;
+}
+
+#site-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#site-title h1 {
+    height: 100%;
+}
+
+.buttonLink {
+    height: 100%;
+}
+
+#top-banner * {
+    /*font-size: 1.0em;*/
+    color: #DDDDDD;
+}
+
+#nav-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: stretch;
+    gap: 20px;
+}
+
+#nav-bar button {
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+#nav-bar .emphasis {
+    padding: 20px 50px;
+    border-radius: 50px;
+    background-color: var(--primaryCol);
+}
+
+#nav-bar .emphasis h1 {
+    color: black;
+}
+
+#nav-bar .selected h1 {
+    color: var(--linkCol);
+}

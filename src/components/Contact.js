@@ -1,15 +1,14 @@
 import React from "react";
 import Template from './Template'
 import ExternalLink from './ExternalLink'
-import './../styles/contact.css'
 import Item from "./Item";
 
 const position = "pos-center";
 const Contact = () => {
         return (
-            <Template title={<h1>Home</h1>} content ={
+            <Template title={"Contact"} content ={
                 <>
-                    <div id={"work-container"}>
+                    <div>
                         <Item title={"Methods of Contact"} pos={position} content={<>
                             <p>
                                 If you wish to contact me about work or internship opportunities, please do not hesitate to contact me via LinkedIn

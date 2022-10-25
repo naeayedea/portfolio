@@ -1,0 +1,33 @@
+a, a:visited, a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: var(--opacityFactor);
+}
+
+p {
+    font-size: 1.5em;
+}
+
+
+.simple-list {
+    list-style-type: none;
+}
+
+.logo-link {
+    padding-top: 0.25vw;
+    text-align: justify;
+}
+
+.logo-link img {
+    height: 2vh;
+    width:auto;
+}
+
+.logo-link a {
+    color: var(--linkCol);
+    word-wrap: break-word;
+    word-break: break-all;
+}

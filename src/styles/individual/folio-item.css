@@ -1,0 +1,36 @@
+.folio-item {
+    display: grid;
+    grid-gap: 1vw;
+    background-color: var(--backgroundCol);
+    padding: 2vh;
+    box-sizing: border-box;
+    border-radius: 1vh;
+    max-width: 100vw;
+}
+
+.folio-item .title {
+    padding: 1vh;
+    box-sizing: border-box;
+    border-bottom: 1px solid #3b404f;
+    font-size: 1.6em;
+}
+
+.folio-item .content {
+    text-align: justify;
+    padding: 1vh;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    min-height: 5vh;
+}
+
+.folio-item .folioImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.folio-item .folioImage img{
+    width: 65%;
+}

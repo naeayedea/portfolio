@@ -1,18 +1,53 @@
-import React from "react";
+import React, {useState} from "react";
 import Template from './Template'
 import Item from './PortfolioItem'
 import data from './../content/data/foliodata.json'
-import './../styles/folio.css'
 
 
+
+let [selected, setSelected] = [];
 const Portfolio = () => {
-    let left = false;
+    [selected, setSelected] = useState(data[0]);
     return (
-        <Template title={<h1>Portfolio</h1>} content ={
+        <Template title={"Portfolio"} content ={
             <div id={"work-container"}>
-                {data.map((entry) => {left=!left; return (<Item key={entry.title+"container"} title={entry.title} image={entry.image} alt={entry.alt} content={entry.content} links={entry.links} pos={left ? "pos-left" : "pos-right"}/>)})}
+                <PortfolioView data={data} display={selected}/>
             </div>
         } />
+    )
+}
+
+const PortfolioView = (props) => {
+    let left = false;
+    const entry = props.display;
+    return (
+        <>
+            <div>
+                <ButtonBar data={props.data}/>
+            </div>
+            <div>
+                <Item key={entry.title+"container"} title={entry.title} image={entry.image} alt={entry.alt} content={entry.content} links={entry.links}/>
+            </div>
+        </>
+    )
+}
+
+const ButtonBar = (props) => {
+    let index = 0;
+    return (
+        <>
+            {(props.data.map((entry) => { return (<ButtonIcon image={entry.image} alt={entry.alt} index={index++} class={entry.title === selected.title ? "selected-icon folio-icon" : "folio-icon"}/>)}))}
+        </>
+    )
+}
+
+const ButtonIcon = (props) => {
+    return (
+        <>
+            <button className={props.class} onClick={() => setSelected(data[props.index])}>
+                <img  src={process.env.PUBLIC_URL+props.image} alt=""/>
+            </button>
+        </>
     )
 }
 
