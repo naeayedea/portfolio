@@ -17,6 +17,14 @@ hr {
     border-radius: 4px 0 0 0;
 }
 
+#banner-left {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
 #site-title {
     display: flex;
     flex-direction: column;
@@ -25,6 +33,19 @@ hr {
 
 #site-title h1 {
     height: 100%;
+}
+
+#site-image {
+    /*width: 100px;*/
+    /*height: 100px;*/
+    /*max-height: 10px;*/
+}
+
+#site-image img {
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+    object-fit: scale-down;
 }
 
 .buttonLink {
