@@ -6,6 +6,7 @@
 @import url("individual/scroll-bar.css");
 @import url("individual/folio.css");
 @import url("individual/folio-item.css");
+@import url("individual/home.css");
 
 * {
     margin: 0;

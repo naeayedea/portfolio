@@ -7,7 +7,10 @@ const Home = () => {
         <Template title={"Home"} content ={
             <>
                 <div>
-
+                    <p>Hello! My name is</p>
+                    <p id={"name-large"}>Steven Muirhead</p>
+                    <p id={"job-title"}>Fourth Year Computer and Electronic Systems | University of Strathclyde</p>
+                    <p>Welcome to my portfolio website, here you can find information about me and some of the projects I have been involved in.</p>
                 </div>
             </>
         } />
