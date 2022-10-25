@@ -1,5 +1,5 @@
 a, a:visited, a:active {
-    color: inherit;
+    color: var(--linkCol);
     text-decoration: none;
 }
 
@@ -10,7 +10,6 @@ a:hover {
 p {
     font-size: 1.5em;
 }
-
 
 .simple-list {
     list-style-type: none;

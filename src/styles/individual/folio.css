@@ -4,24 +4,32 @@
     object-fit: cover;
 }
 
+.folio-item .folioImage img:hover {
+    cursor: zoom-in;
+}
+
 .folio-icon img:hover {
     opacity: var(--opacityFactor);
 }
 
 .folio-icon {
-    width: 150px;
-    height: 150px;
+    width: 100%;
+    aspect-ratio: 1 /1;
+    /*height: auto;*/
     background-color: var(--backgroundCol);
     padding: 0;
-    margin: 0;
+    margin: 8px;
     overflow: hidden;
     border: none;
     border-radius: 30px;
 }
 
+.folio-icon:hover {
+    cursor:pointer;
+}
+
 .selected-icon {
-    border-left: 2px solid var(--primaryCol);
-    border-right: 2px solid var(--primaryCol);
+    border-bottom: 0.4vh solid var(--primaryCol)
 }
 
 .selected-icon img {
@@ -33,6 +41,30 @@
 }
 
 #work-container {
+    max-height: 100%;
     display: grid;
-    grid-template-columns: 1fr 10fr;
+    grid-template-columns: 1fr 7fr;
+    overflow: hidden;
+}
+
+.wrapper {
+    transform: scaleX(-1);
+}
+
+.unwrapper {
+    transform: scaleX(-1);
+}
+
+#folio-buttons {
+    padding: 5%;
+    overflow-y: auto;
+}
+
+#folio-view {
+    overflow-y: auto;
+}
+
+#work-container {
+    height: 100%;
+    max-height: 100%;
 }

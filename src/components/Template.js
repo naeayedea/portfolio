@@ -15,16 +15,8 @@ const Template = (props) => {
                 <Nav parent={this} select={props.title}/>
             </div>
             <div id={"main-div"}>
-                <div id={"main-container"}>
-                    {/*Title text*/}
-                    <div id={"title"}>
-
-                    </div>
                     {/*Content of the page passed through by props */}
-                    <div id={"content"}>
-                        {props.content}
-                    </div>
-                </div>
+                    {props.content}
             </div>
         </div>
     );

@@ -11,8 +11,10 @@
 .folio-item .title {
     padding: 1vh;
     box-sizing: border-box;
-    border-bottom: 1px solid #3b404f;
-    font-size: 1.6em;
+    border-bottom: 1px solid var(--secondaryCol);
+    font-size: 2em;
+    text-transform: uppercase;
+    color: var(--primaryCol);
 }
 
 .folio-item .content {

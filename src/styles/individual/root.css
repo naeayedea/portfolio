@@ -1,16 +1,18 @@
 :root {
     --primaryCol: black;
     --backgroundCol: white;
-    --linkCol: #1E6AE1;
-    --opacityFactor: 0.7;
+    --linkCol: #4BD5E7;
+    --opacityFactor: 0.75;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --primaryCol: #01fba7DD;
+
+        --primaryCol: #01fba7;
+        /*--primaryCol: #12EDC9;*/
         --secondaryCol: #4BD5E7CC;
         --backgroundCol: #212121;
-        color: #DDDDDD;
+        --fontCol: #DDDDDD;
     }
 }
 
@@ -20,6 +22,6 @@
         --secondaryCol: #4BD5E7CC;
 
         --backgroundCol: #212121;
-        color: white;
+        --fontCol: black;
     }
 }
