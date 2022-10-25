@@ -31,16 +31,6 @@ hr {
     justify-content: center;
 }
 
-#site-title h1 {
-    height: 100%;
-}
-
-#site-image {
-    /*width: 100px;*/
-    /*height: 100px;*/
-    /*max-height: 10px;*/
-}
-
 #site-image img {
     border-radius: 50px;
     width: 100px;

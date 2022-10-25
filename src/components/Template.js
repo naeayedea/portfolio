@@ -7,21 +7,22 @@ const Template = (props) => {
     return (
         <div id={"top-view"}>
             <div id={"top-banner"}>
-                <div id={"banner-left"} >
-                    <div id={"site-image"}>
-                        <img src="https://avatars.githubusercontent.com/u/70326670" alt=""/>
-                    </div>
-                    <div id={"site-title"}>
-                        <Link to={"." + HOME} id={"home-link"}>
+                <Link to={"." + HOME} id={"home-link"}>
+                    <div id={"banner-left"}>
+                        <div id={"site-image"}>
+                            <img src="https://avatars.githubusercontent.com/u/70326670" alt=""/>
+                        </div>
+                        <div id={"site-title"}>
                             <h1>Steven Muirhead</h1>
-                        </Link>
+                        </div>
                     </div>
-                </div>
+                </Link>
+
                 <Nav parent={this} select={props.title}/>
             </div>
             <div id={"main-div"}>
-                    {/*Content of the page passed through by props */}
-                    {props.content}
+                {/*Content of the page passed through by props */}
+                {props.content}
             </div>
         </div>
     );
@@ -31,10 +32,12 @@ const Nav = (props) => {
     return (
         <div id="nav-bar" className={"nav"}>
             <div id={"nav-buttons"}>
-                <LinkButton class={props.select === "Home" ? "selected" : ""} name={""} displayName={"Home"} />
+                <LinkButton class={props.select === "Home" ? "selected" : ""} name={""} displayName={"Home"}/>
                 <LinkButton class={props.select === "About" ? "selected" : ""} name={"About"} displayName={"About"}/>
-                <LinkButton class={props.select === "Contact" ? "selected" : ""} name={"contact"} displayName={"Contact"}/>
-                <LinkButton class={props.select === "Portfolio" ? "selected emphasis" : "emphasis"} name={"work"} displayName={"Portfolio"}/>
+                <LinkButton class={props.select === "Contact" ? "selected" : ""} name={"contact"}
+                            displayName={"Contact"}/>
+                <LinkButton class={props.select === "Portfolio" ? "selected emphasis" : "emphasis"} name={"work"}
+                            displayName={"Portfolio"}/>
             </div>
         </div>
     )
