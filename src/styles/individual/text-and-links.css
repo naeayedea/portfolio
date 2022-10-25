@@ -16,17 +16,29 @@ p {
 }
 
 .logo-link {
-    padding-top: 0.25vw;
     text-align: justify;
+    word-wrap: break-word;
+    word-break: break-all;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.link-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.logo-link p {
+    color: var(--linkCol);
 }
 
 .logo-link img {
-    height: 2vh;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 5em;
     width:auto;
 }
 
-.logo-link a {
-    color: var(--linkCol);
-    word-wrap: break-word;
-    word-break: break-all;
-}
