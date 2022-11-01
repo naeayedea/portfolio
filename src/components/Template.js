@@ -7,16 +7,19 @@ const Template = (props) => {
     return (
         <div id={"top-view"}>
             <div id={"top-banner"}>
-                <Link to={"." + HOME} id={"home-link"}>
-                    <div id={"banner-left"}>
+                <div id={"banner-left"}>
                         <div id={"site-image"}>
-                            <img src="https://avatars.githubusercontent.com/u/70326670" alt=""/>
+                            <Link to={"" + HOME} id={"home-link"}>
+                                <img src="https://avatars.githubusercontent.com/u/70326670" alt=""/>
+                            </Link>
                         </div>
+                    <Link to={"." + HOME} id={"home-link"}>
                         <div id={"site-title"}>
                             <h1>Steven Muirhead</h1>
                         </div>
-                    </div>
-                </Link>
+                    </Link>
+                </div>
+
 
                 <Nav parent={this} select={props.title}/>
             </div>
