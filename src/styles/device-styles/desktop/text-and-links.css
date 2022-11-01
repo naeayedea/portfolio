@@ -14,7 +14,7 @@ p {
 }
 
 .logo-link {
-    gap: 20px;
+    gap: 15px;
 }
 
 .link-wrapper {
@@ -29,8 +29,8 @@ p {
 }
 
 .logo-link img {
-    border-radius: 15px;
-    height: 5vw;
-    flex-basis: 5vw;
+    border-radius: 10px;
+    height: 4vw;
+    flex-basis: 4vw;
 }
 
