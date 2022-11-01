@@ -27,6 +27,8 @@ p {
 }
 
 .logo-link img {
-
+    height: 10vh;
+    min-width: 10vh;
+    border-radius: 10px;
 }
 

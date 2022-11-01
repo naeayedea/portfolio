@@ -7,5 +7,9 @@
 @import url("tiny/home.css");
 
 * {
-    background: red !important;
+    /*background: red !important;*/
+}
+
+#main-div {
+    padding: 4vw;
 }

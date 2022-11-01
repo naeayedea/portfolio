@@ -1,13 +1,13 @@
 ::-webkit-scrollbar {
-
+    width: 2px;
 }
 
 ::-webkit-scrollbar-track {
-
+    border-radius: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
-
+    border-radius: 8px;
 }
 
 ::-webkit-scrollbar-thumb:hover {

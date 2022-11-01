@@ -3,8 +3,7 @@
 @import url("device-styles/tiny.css") screen and (max-width: 299px);
 @import url("device-styles/mobile.css") screen and (min-width: 300px) and (max-width: 739px);
 @import url("device-styles/tablet.css") screen and (min-width: 740px) and (max-width: 1023px);
-@import url("device-styles/desktop.css")screen and (min-width: 1024px);
-@import url("device-styles/tablet.css") screen and (orientation: landscape);
+@import url("device-styles/desktop.css") screen and (min-width: 1024px);
 /*!* For tiny devices e.g. galaxy fold: *!*/
 /*@media only screen and (max-width: 300px) {*/
 
