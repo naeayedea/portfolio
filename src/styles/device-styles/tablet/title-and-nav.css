@@ -23,7 +23,7 @@ hr {
 }
 
 #top-banner * {
-
+    font-size: 1.05em;
 }
 
 #nav-buttons {
@@ -35,7 +35,9 @@ hr {
 }
 
 #nav-bar .emphasis {
-
+    padding: 10px 30px;
+    border-radius: 50px;
+    max-height: 80%;
 }
 
 #nav-bar .emphasis h1 {
