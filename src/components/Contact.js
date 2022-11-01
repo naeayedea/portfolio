@@ -17,18 +17,18 @@ const Contact = () => {
                         <Item title={"LinkedIn"} pos={position} content={<>
                             <p>My LinkedIn contains in depth information about my education, skills, modules, test-scores etc. It is also the best way of getting in contact with me  </p>
                             <br/>
-                            <p >
+                            <div>
                                 <ExternalLink href="https://www.linkedin.com/in/stevenmuirhead/" content={<div className={"logo-link"}><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn Logo"/><div className={"link-wrapper"}><p>My Profile</p></div></div>}/>
-                            </p>
+                            </div>
                         </>}/>
                         <Item title={"GitHub"} pos={position} content={<>
                             <p>
                                 Whilst a significant number of my projects are hosted on my universities GitLab instance, some projects, including the react code for this website can be found at:
                             </p>
                             <br/>
-                            <p className={"logo-link"}>
+                            <div className={"logo-link"}>
                                 <ExternalLink href="https://github.com/naeayedea" content={<div className={"logo-link"}><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub logo"/><div className={"link-wrapper"}><p>https://github.com/naeayedea</p></div></div>}/>
-                            </p>
+                            </div>
                         </>}/>
                     </div>
                 </>
