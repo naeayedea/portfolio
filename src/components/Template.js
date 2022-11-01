@@ -13,7 +13,7 @@ const Template = (props) => {
                                 <img src="https://avatars.githubusercontent.com/u/70326670" alt=""/>
                             </Link>
                         </div>
-                    <Link to={"." + HOME} id={"home-link"}>
+                    <Link to={"" + HOME} id={"home-link"}>
                         <div id={"site-title"}>
                             <h1>Steven Muirhead</h1>
                         </div>
