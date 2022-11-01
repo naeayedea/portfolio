@@ -16,7 +16,7 @@ hr {
 #site-title {
     display: flex;
     justify-content: center;
-    font-size: 5vw;
+    font-size: min(4vh, 4vw);
     margin-bottom: 5px;
 
 }
@@ -27,7 +27,8 @@ hr {
 }
 
 #site-image img {
-    max-width: 40vw;
+    max-height: min(30vh, 40vw);
+    /*max-width: 40vw;*/
     border-radius: 20vw;
 }
 
@@ -47,7 +48,7 @@ hr {
 }
 
 #nav-buttons h1 {
-    font-size: 7vw;
+    font-size: min(7vw, 7vh);
 }
 
 #nav-bar button {
