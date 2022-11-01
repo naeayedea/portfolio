@@ -50,6 +50,10 @@ hr {
     background-color: var(--primaryCol);
 }
 
+#nav-bar .emphasis.selected {
+    background-color: var(--secondaryCol);
+}
+
 #nav-bar .emphasis h1 {
     color: black;
 }
