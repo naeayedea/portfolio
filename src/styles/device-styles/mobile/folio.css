@@ -15,7 +15,7 @@
 }
 
 #folio-buttons {
-
+    padding: 5%;
 }
 
 #folio-view {
@@ -23,5 +23,5 @@
 }
 
 #work-container {
-
+    grid-template-columns: 1fr 4fr;
 }

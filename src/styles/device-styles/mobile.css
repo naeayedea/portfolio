@@ -6,6 +6,7 @@
 @import url("mobile/folio-item.css");
 @import url("mobile/home.css");
 
-* {
-    background: blue !important;
+
+#main-div {
+    padding: 2vw;
 }

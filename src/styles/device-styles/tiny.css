@@ -6,9 +6,6 @@
 @import url("tiny/folio-item.css");
 @import url("tiny/home.css");
 
-* {
-    /*background: red !important;*/
-}
 
 #main-div {
     padding: 4vw;
