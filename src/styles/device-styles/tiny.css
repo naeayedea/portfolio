@@ -1,0 +1,11 @@
+@import url("tiny/imageDialog.css");
+@import url("tiny/title-and-nav.css");
+@import url("tiny/text-and-links.css");
+@import url("tiny/scroll-bar.css");
+@import url("tiny/folio.css");
+@import url("tiny/folio-item.css");
+@import url("tiny/home.css");
+
+* {
+    background: red !important;
+}

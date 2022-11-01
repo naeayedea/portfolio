@@ -19,8 +19,7 @@
 
 .imageDialog img {
     height: auto;
-    max-height: 97vh;
-    width: 40%;
+    max-width: 100%;
 }
 
 .imageDialog:hover, .imageDialog img:hover  {

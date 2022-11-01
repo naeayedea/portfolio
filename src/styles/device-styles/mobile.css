@@ -1,0 +1,11 @@
+@import url("mobile/imageDialog.css");
+@import url("mobile/title-and-nav.css");
+@import url("mobile/text-and-links.css");
+@import url("mobile/scroll-bar.css");
+@import url("mobile/folio.css");
+@import url("mobile/folio-item.css");
+@import url("mobile/home.css");
+
+* {
+    background: blue !important;
+}

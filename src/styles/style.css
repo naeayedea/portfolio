@@ -1,47 +1,36 @@
 /*These imports wont have a performance downside as react minifies the css anyway, easier to manage the styles this way*/
-@import url("individual/root.css");
-@import url("individual/imageDialog.css");
-@import url("individual/title-and-nav.css");
-@import url("individual/text-and-links.css");
-@import url("individual/scroll-bar.css");
-@import url("individual/folio.css");
-@import url("individual/folio-item.css");
-@import url("individual/home.css");
+@import url("common.css");
+@import url("device-styles/tiny.css") screen and (max-width: 299px);
+@import url("device-styles/mobile.css") screen and (min-width: 300px) and (max-width: 739px);
+@import url("device-styles/tablet.css") screen and (min-width: 740px) and (max-width: 1023px);
+@import url("device-styles/desktop.css")screen and (min-width: 1024px);
+@import url("device-styles/tablet.css") screen and (orientation: landscape);
+/*!* For tiny devices e.g. galaxy fold: *!*/
+/*@media only screen and (max-width: 300px) {*/
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, 'Helvectica', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    color: var(--fontCol);
-}
+/*}*/
 
-#top-view {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--backgroundCol);
-    width: 100vw;
-    height: 100vh;
-    min-height: 100vh;
-    max-width: 2560px;
-    max-height: 100vh;
-    padding: 1vw 1vw 0 1vw;
-    overflow: hidden;
-}
+/*!* For mobile: *!*/
+/*@media only screen and (min-width: 600px) {*/
 
-#main-div {
-    overflow-y: auto;
-    height: 90vh;
-    max-height: 90vh;
-}
 
-body {
-    background-color: var(--backgroundCol);
-    /*background-color: black;*/
-    color: var(--fontColor);
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
-}
+/*}*/
+
+/*!* For tablet: *!*/
+/*@media only screen and (min-width: 740px) {*/
+
+
+/*}*/
+
+/*!* For desktop: *!*/
+/*@media only screen and (min-width: 1024px)  {*/
+
+
+/*}*/
+
+/*!* landscape devices*!*/
+/*@media (orientation: landscape) {*/
+
+
+/*}*/
 

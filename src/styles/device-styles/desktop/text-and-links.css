@@ -1,0 +1,35 @@
+a, a:visited, a:active {
+
+}
+
+a:hover {
+
+}
+
+p {
+    font-size: 1.5em;
+}
+
+.simple-list {
+}
+
+.logo-link {
+    gap: 20px;
+}
+
+.link-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.logo-link p {
+
+}
+
+.logo-link img {
+    border-radius: 15px;
+    height: 5em;
+}
+
