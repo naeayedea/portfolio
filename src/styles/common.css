@@ -59,8 +59,7 @@
 
 #main-div {
     overflow-y: auto;
-    /*height: 90vh;*/
-    /*max-height: 85vh;*/
+    height: 100%;
 }
 
 body {
