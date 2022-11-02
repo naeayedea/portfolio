@@ -5,7 +5,7 @@ import DialogImage from './DialogImage'
 const PortfolioItem = (props) => {
     let i = 0;
     return (
-        <div key={props.title} className={"folio-item "+props.pos}>
+        <div key={props.title} className={"folio-item "+(props.pos != null ? props.pos : "pos-center")}>
             <div key={props.title+"title"} className={"title"}>
                 {props.title}
             </div>

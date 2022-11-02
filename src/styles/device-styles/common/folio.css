@@ -1,0 +1,65 @@
+.folio-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.folio-item .folioImage img:hover {
+    cursor: zoom-in;
+}
+
+.folio-icon img:hover {
+    opacity: var(--opacityFactor);
+}
+
+.folio-icon {
+    width: 100%;
+    aspect-ratio: 1 /1;
+    /*height: auto;*/
+    background-color: var(--backgroundCol);
+    padding: 0;
+    overflow: hidden;
+    border: none;
+}
+
+.folio-icon:hover {
+    cursor:pointer;
+}
+
+.selected-icon {
+
+}
+
+.selected-icon img {
+    opacity: var(--opacityFactor);
+}
+
+.selected-icon img:hover {
+    opacity: var(--opacityFactor);
+}
+
+#work-container {
+    max-height: 100%;
+    display: grid;
+    overflow: hidden;
+}
+
+.wrapper {
+    transform: scaleX(-1);
+}
+
+.unwrapper {
+    transform: scaleX(-1);
+}
+
+#folio-buttons {
+    overflow-y: auto;
+}
+
+#folio-view {
+    overflow-y: auto;
+}
+
+#work-container {
+
+}

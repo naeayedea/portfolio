@@ -1,0 +1,32 @@
+#name-large {
+    font-size: 6em;
+    padding: 20px 0;
+}
+
+#home-container p {
+
+}
+
+#home-container {
+
+}
+
+#home-view {
+    margin-left: 5vw;
+    margin-bottom: 10vw;
+}
+
+#welcome-text {
+
+}
+
+#job-title {
+    font-size: 1.4em;
+    max-width: 80%;
+}
+
+#intro-text {
+    font-size: 1em;
+    max-width: 40%;
+    text-align: justify;
+}

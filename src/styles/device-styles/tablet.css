@@ -1,0 +1,11 @@
+@import url("tablet/imageDialog.css");
+@import url("tablet/title-and-nav.css");
+@import url("tablet/text-and-links.css");
+@import url("tablet/scroll-bar.css");
+@import url("tablet/folio.css");
+@import url("tablet/folio-item.css");
+@import url("tablet/home.css");
+
+* {
+    /*background: green !important;*/
+}

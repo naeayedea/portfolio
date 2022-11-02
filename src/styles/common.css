@@ -1,0 +1,76 @@
+@import url("device-styles/common/imageDialog.css");
+@import url("device-styles/common/title-and-nav.css");
+@import url("device-styles/common/text-and-links.css");
+@import url("device-styles/common/scroll-bar.css");
+@import url("device-styles/common/folio.css");
+@import url("device-styles/common/folio-item.css");
+@import url("device-styles/common/home.css");
+
+
+/*some default colors*/
+:root {
+    --primaryCol: blue;
+    --backgroundCol: white;
+    --linkCol: #4BD5E7;
+    --opacityFactor: 0.75;
+}
+
+/*This is temporarily disabled until I am happy with the theme*/
+@media (prefers-color-scheme: light) {
+    :root {
+        --primaryCol: #cf8330;
+        --secondaryCol:#ff9d33;
+        --backgroundCol: white;
+        --fontCol: #444444;
+        --linkCol: var(--secondaryCol);
+        --emphasisCol: var(--fontCol);
+    }
+}
+
+/*this setting has no actual effect right now until happy with the light theme*/
+@media (prefers-color-scheme: dark) or (prefers-color-scheme: light) {
+    :root {
+        --primaryCol: #01fba7;
+        /*--primaryCol: #12EDC9;*/
+        --secondaryCol: #4BD5E7CC;
+        --backgroundCol: #212121;
+        --fontCol: #DDDDDD;
+        --linkCol: var(--secondaryCol);
+        --emphasisCol: black;
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, Verdana, 'Helvectica', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    color: var(--fontCol);
+}
+
+#top-view {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--backgroundCol);
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    max-width: 2560px;
+    max-height: 100vh;
+    padding: 1vw 1vw 0 1vw;
+    overflow: hidden;
+}
+
+#main-div {
+    overflow-y: auto;
+    height: 100%;
+}
+
+body {
+    background-color: var(--backgroundCol);
+    /*background-color: black;*/
+    color: var(--fontColor);
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}

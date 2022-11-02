@@ -1,0 +1,28 @@
+.imageDialog {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(55, 55, 55, 0.5);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: none;
+}
+
+.imageDialogContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.imageDialog img {
+    height: auto;
+    max-width: 100%;
+}
+
+.imageDialog:hover, .imageDialog img:hover  {
+    cursor: zoom-out !important;
+}

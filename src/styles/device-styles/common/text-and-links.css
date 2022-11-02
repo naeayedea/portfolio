@@ -1,0 +1,42 @@
+a, a:visited, a:active {
+    color: var(--linkCol);
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: var(--opacityFactor);
+}
+
+p {
+
+}
+
+.simple-list {
+    list-style-type: none;
+}
+
+.logo-link {
+    text-align: justify;
+    word-wrap: break-word;
+    word-break: break-all;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.link-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.logo-link p {
+    color: var(--linkCol);
+}
+
+.logo-link img {
+    overflow: hidden;
+    width:auto;
+}
+

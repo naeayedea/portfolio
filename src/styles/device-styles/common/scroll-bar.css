@@ -1,0 +1,15 @@
+::-webkit-scrollbar {
+
+}
+
+::-webkit-scrollbar-track {
+
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primaryCol);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondaryCol);
+}

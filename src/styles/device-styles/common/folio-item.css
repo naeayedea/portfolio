@@ -1,0 +1,24 @@
+.folio-item {
+    display: grid;
+    background-color: var(--backgroundCol);
+}
+
+.folio-item .title {
+    border-bottom: 1px solid var(--secondaryCol);
+    text-transform: uppercase;
+    color: var(--primaryCol);
+}
+
+.folio-item .content {
+    text-align: justify;
+}
+
+.folio-item .folioImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.folio-item .folioImage img{
+
+}
