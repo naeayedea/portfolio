@@ -29,7 +29,8 @@ hr {
 }
 
 #top-banner * {
-    color: #DDDDDD;
+    /*color: #DDDDDD;*/
+    color: var(--fontColor);
 }
 
 #nav-buttons {
@@ -55,11 +56,11 @@ hr {
 }
 
 #nav-bar .emphasis h1 {
-    color: black;
+    color: var(--emphasisCol);
 }
 
 #nav-bar .emphasis.selected h1 {
-    color: black;
+    color: var(--emphasisCol);
 }
 
 #nav-bar .selected h1 {

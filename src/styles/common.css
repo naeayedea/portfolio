@@ -7,34 +7,38 @@
 @import url("device-styles/common/home.css");
 
 
+/*some default colors*/
 :root {
-    --primaryCol: black;
+    --primaryCol: blue;
     --backgroundCol: white;
     --linkCol: #4BD5E7;
     --opacityFactor: 0.75;
 }
 
-@media (prefers-color-scheme: dark) {
+/*This is temporarily disabled until I am happy with the theme*/
+@media (prefers-color-scheme: light) {
     :root {
+        --primaryCol: #cf8330;
+        --secondaryCol:#ff9d33;
+        --backgroundCol: white;
+        --fontCol: #444444;
+        --linkCol: var(--secondaryCol);
+        --emphasisCol: var(--fontCol);
+    }
+}
 
+/*this setting has no actual effect right now until happy with the light theme*/
+@media (prefers-color-scheme: dark) or (prefers-color-scheme: light) {
+    :root {
         --primaryCol: #01fba7;
         /*--primaryCol: #12EDC9;*/
         --secondaryCol: #4BD5E7CC;
         --backgroundCol: #212121;
         --fontCol: #DDDDDD;
+        --linkCol: var(--secondaryCol);
+        --emphasisCol: black;
     }
 }
-
-@media (prefers-color-scheme: light) {
-    :root {
-        --primaryCol: #01fba7DD;
-        --secondaryCol: #4BD5E7CC;
-
-        --backgroundCol: #212121;
-        --fontCol: black;
-    }
-}
-
 * {
     margin: 0;
     padding: 0;
