@@ -18,7 +18,6 @@ const Portfolio = () => {
 }
 
 const PortfolioView = (props) => {
-    let left = false;
     const entry = props.display;
     return (
         <>
