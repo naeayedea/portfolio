@@ -1,8 +1,11 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import ExternalLink from './ExternalLink'
 import DialogImage from './DialogImage'
 
 const PortfolioItem = (props) => {
+    useEffect(() => {
+       document.getElementById("folio-view").scrollTop = 0;
+    });
     let i = 0;
     return (
         <div key={props.title} className={"folio-item "+(props.pos != null ? props.pos : "pos-center")}>

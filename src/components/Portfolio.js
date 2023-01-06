@@ -37,7 +37,7 @@ const ButtonBar = (props) => {
     let index = 0;
     return (
         <>
-            {(props.data.map((entry) => { return (<ButtonIcon image={entry.image} alt={entry.alt} title={entry.title} index={index++} class={entry.title === selected.title ? "selected-icon folio-icon" : "folio-icon"}/>)}))}
+            {(props.data.map((entry) => { return (<ButtonIcon key={"button-bar"+index} image={entry.image} alt={entry.alt} title={entry.title} index={index++} class={entry.title === selected.title ? "selected-icon folio-icon" : "folio-icon"}/>)}))}
         </>
     )
 }
@@ -45,7 +45,7 @@ const ButtonBar = (props) => {
 const ButtonIcon = (props) => {
     return (
         <>
-            <button className={props.class} onClick={() => setSelected(data[props.index])}>
+            <button  className={props.class} onClick={() => setSelected(data[props.index])}>
                 <img  src={process.env.PUBLIC_URL+props.image} alt={props.alt} title={props.title}/>
             </button>
         </>
