@@ -46,6 +46,7 @@
     background-color: var(--backgroundCol);
     width: 100vw;
     height: 100vh;
+    height: calc(100vh - calc(100vh - 100%));
     min-height: 100vh;
     max-width: 2560px;
     max-height: 100vh;
