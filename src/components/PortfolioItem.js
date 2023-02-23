@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect} from 'react';
 import ExternalLink from './ExternalLink'
 import DialogImage from './DialogImage'
 
