@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import SkillCard from "../components/cards/SkillCard";
+import {PrimaryButton} from "../components/Button";
 
 export default function SkillsPage() {
     const skillSets = [
@@ -32,15 +33,15 @@ export default function SkillsPage() {
 
     return (
         <>
-            <h1 className="text-4xl font-bold text-white mb-8">My Skills</h1>
+            <h1 className="text-4xl font-bold text-white dark:text-gray-100 mb-8">My Skills</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
                 {skillSets.map((skillSet, index) => (
                     <SkillCard key={index} title={skillSet.title} skills={skillSet.skills}/>
                 ))}
             </div>
-            <Link to="/"
-                  className="inline-block mt-8 bg-white text-blue-600 px-6 py-2 rounded-full font-semibold hover:bg-blue-100 transition duration-300">Back
-                to Home</Link>
+
+            <PrimaryButton to={"/"} className={"inline-block mt-8"}>Back to Home</PrimaryButton>
+
         </>
     );
 }

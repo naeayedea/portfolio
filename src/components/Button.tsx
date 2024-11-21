@@ -12,9 +12,9 @@ interface ButtonProps {
 }
 
 const baseStyles = "px-6 py-2 rounded-full font-semibold transition duration-300";
-const primaryStyles = "bg-white text-blue-600 hover:bg-blue-100";
-const secondaryStyles = "border-2 border-white text-white hover:bg-white hover:text-blue-600";
-const accentStyles = "bg-gradient-to-r from-blue-500 from-40% to-purple-500 text-white hover:from-blue-600 hover:to-purple-600";
+const primaryStyles = "bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 hover:bg-blue-100 dark:hover:bg-gray-700";
+const secondaryStyles = "border-2 border-white dark:border-gray-300 text-white dark:text-gray-300 hover:bg-white hover:text-blue-600 dark:hover:bg-gray-700 dark:hover:text-blue-400";
+const accentStyles = "bg-gradient-to-r from-blue-400 to-purple-500 dark:from-blue-600 dark:to-purple-700 text-white hover:from-blue-500 hover:to-purple-600 dark:hover:from-blue-700 dark:hover:to-purple-800";
 
 export const Button: React.FC<ButtonProps> = ({
                                                   children,

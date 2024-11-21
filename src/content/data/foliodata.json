@@ -13,8 +13,9 @@
       {
         "title": "TITLE",
         "content": "CONTENT",
-        "image": "/images/logo512.png",
-        "links": []
+        "image": "/logo512.png",
+        "links": [
+        ]
       }
     ]
   },
@@ -22,7 +23,7 @@
     "title": "Dynamic Ad-Hoc Licensing for Private 5G Networks (2024)",
     "subTitle": "Masters Project",
     "details": "TODO",
-    "thumbnail": "/images/logo512.png",
+    "thumbnail": "/logo512.png",
     "alt": "Placeholder Image",
     "path": "/projects/5g-dynamic-licensing-system",
     "carouselImages":  [
