@@ -32,7 +32,6 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     }, []);
 
     useEffect(() => {
-        localStorage.setItem('theme', theme);
         if (theme === 'dark') {
             document.documentElement.classList.add('dark');
         } else {
@@ -41,6 +40,8 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     }, [theme]);
 
     const toggleTheme = () => {
+        localStorage.setItem('theme', theme === 'light' ? 'dark' : 'light');
+
         setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light');
     };
 
