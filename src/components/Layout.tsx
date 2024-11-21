@@ -39,7 +39,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div  className="flex flex-col h-screen overflow-hidden">
             <Header />
             <main ref={mainRef} className="flex-grow overflow-y-auto bg-gradient-to-br from-blue-400 to-purple-500 dark:from-blue-800 dark:to-purple-900">
-                <div  className="container mx-auto px-4 py-8 ">
+                <div  className="container mx-auto px-4 py-4 ">
                     {children}
                 </div>
             </main>

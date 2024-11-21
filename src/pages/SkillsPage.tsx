@@ -40,8 +40,7 @@ export default function SkillsPage() {
                 ))}
             </div>
 
-            <PrimaryButton to={"/"} className={"inline-block mt-8"}>Back to Home</PrimaryButton>
-
+            <PrimaryButton to={"/"} className={"inline-block mt-4"}>Back to Home</PrimaryButton>
         </>
     );
 }
