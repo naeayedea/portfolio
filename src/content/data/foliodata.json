@@ -1,73 +1,192 @@
 [
   {
+    "title": "Autonomous Alarm Monitoring System (2023)",
+    "subTitle": "Honours Project",
+    "details": "TODO",
+    "thumbnail": "/images/logo512.png",
+    "alt": "Placeholder Image",
+    "path": "/projects/5g-dynamic-licensing-system",
+    "carouselImages": [
+
+    ],
+    "sections": [
+      {
+        "title": "TITLE",
+        "content": "CONTENT",
+        "image": "/images/logo512.png",
+        "links": []
+      }
+    ]
+  },
+  {
+    "title": "Dynamic Ad-Hoc Licensing for Private 5G Networks (2024)",
+    "subTitle": "Masters Project",
+    "details": "TODO",
+    "thumbnail": "/images/logo512.png",
+    "alt": "Placeholder Image",
+    "path": "/projects/5g-dynamic-licensing-system",
+    "carouselImages":  [
+
+    ],
+    "sections": [
+      {
+        "title": "TITLE",
+        "content": "CONTENT",
+        "image": "/images/logo512.png",
+        "links": []
+      }
+    ]
+  },
+  {
     "title": "Boston Metro System (2022)",
-    "content": "For this group project we were tasked with modelling the boston metro system with a backend that utilised a MultiGraph whilst abstracting specifics of the implementation through an API with a strict specification which was used by the GUI shown in the image.\n\nI was fully responsible for specifying, implementing and testing the MultiGraph code to a high quality which received excellent feedback from teaching staff. I made proper use of interface, generics and inheritance to produce a robust implementation which the rest of the system relied on.\n\nOverall, this project was a very enjoyable experience and I feel that I was able to make a full use of my programming skills, particularly with algorithms and utilising functional aspects of Java. You can view the javadocs for the final project at the following link:  ",
-    "image": "/images/bostonmetro.png",
+    "subTitle": "PLACEHOLDER",
+    "details": "A SHORTER BOSTON METRO DESCRIPTION",
+    "thumbnail": "/images/bostonmetro.png",
     "alt": "Display of GUI depicting the Boston Metro System as part of the group project. There is a map of the system with a clock and route information",
-    "links": [
+    "path": "/projects/boston-metro-system",
+    "carouselImages":  [
+
+    ],
+    "sections": [
       {
-      "linkName": "Javadocs",
-      "url": "https://devweb2021.cis.strath.ac.uk/~ylb17138/308/build/docs/javadoc/"
+        "title": "TITLE",
+        "content": "For this group project we were tasked with modelling the boston metro system with a backend that utilised a MultiGraph whilst abstracting specifics of the implementation through an API with a strict specification which was used by the GUI shown in the image.\n\nI was fully responsible for specifying, implementing and testing the MultiGraph code to a high quality which received excellent feedback from teaching staff. I made proper use of interface, generics and inheritance to produce a robust implementation which the rest of the system relied on.\n\nOverall, this project was a very enjoyable experience and I feel that I was able to make a full use of my programming skills, particularly with algorithms and utilising functional aspects of Java. You can view the javadocs for the final project at the following link:  ",
+        "image": "/images/logo512.png",
+        "links": [
+          {
+            "linkName": "Javadocs",
+            "url": "https://devweb2021.cis.strath.ac.uk/~ylb17138/308/build/docs/javadoc/"
+          }
+        ]
       }
     ]
-  },  {
+  },
+  {
     "title": "Embedded C Application (2022)",
-    "content": "For the purposes of completing my degree, I took part in a group project to come up with, design and implement a hardware and software system that could demonstrate a key engineering principle. As a group we decided upon a simple tachometer which could demonstrate principles of measurement and control theory.\n\nI was responsible for the firmware in the project which received input from the PCB and converted the signals into a readable RPM for the user. I implemented a serial bluetooth command handler which stored characters in an array and utilised a map of strings to void function pointers which were ran when the correct string was received. The code for this ISR can be found in the image.\n\nThe firmware was relatively complex, needing to take into account the slow clock speed of the processor which was particularly interesting as the code had to be as efficient as possible to ensure rapid response times for interrupts whilst constantly supplying an attached mobile application with up to date RPM information. This project improved my understanding of C programming - particularly within low powered embedded systems.  ",
-    "image": "/images/embedded.png",
+    "subTitle": "PLACEHOLDER",
+    "details": "A SHORTER EMBEDDED C DESCRIPTION",
+    "thumbnail": "/images/embedded.png",
     "alt": "A code listing showing an example of an interrupt service routine used within the embedded microcontroller code",
-    "links": [
+    "path": "/projects/embedded-c-application",
+    "carouselImages":  [
 
+    ],
+    "sections": [
+      {
+        "title": "TITLE",
+        "content": "For the purposes of completing my degree, I took part in a group project to come up with, design and implement a hardware and software system that could demonstrate a key engineering principle. As a group we decided upon a simple tachometer which could demonstrate principles of measurement and control theory.\n\nI was responsible for the firmware in the project which received input from the PCB and converted the signals into a readable RPM for the user. I implemented a serial bluetooth command handler which stored characters in an array and utilised a map of strings to void function pointers which were ran when the correct string was received. The code for this ISR can be found in the image.\n\nThe firmware was relatively complex, needing to take into account the slow clock speed of the processor which was particularly interesting as the code had to be as efficient as possible to ensure rapid response times for interrupts whilst constantly supplying an attached mobile application with up to date RPM information. This project improved my understanding of C programming - particularly within low powered embedded systems.",
+        "image": "/images/logo512.png",
+        "links": []
+      }
     ]
-  },  {
+  },
+  {
     "title": "Discord Bot (2019 - present)",
-    "content": "Since 2019, I have continued to develop and improve upon a general purpose discord bot. I have used the bot primarily as a method of improving my programming skills and it was first real project that I worked on. The bot code is event driven, utilising an API from the discord endpoint through the popular java-discord library JDA.\n\n Over the years I have built upon the bots functionality both user facing and internally. Currently, the bot can store information such as custom prefixes and user information in a database through custom database code which uses prepared statements for security. To interact with users, it uses a robust and powerful command interface which I have honed over time which allows for various access levels, subcommands and multiple input types such as reaction triggered commands. \n\n This project shows my journey as a software developer from my earliest java programs in 2019 to my latest work, I have preserved each version of keith in its own branch so that its easy to see the difference over the years, all three versions can be found at the github repository below:",
-    "image": "/images/keith.png",
+    "subTitle": "PLACEHOLDER",
+    "details": "A SHORTER KEITH DESCRIPTION",
+    "thumbnail": "/images/keith.png",
     "alt": "Examples of bot commands including reminders, pins and feedback. ",
-    "links": [
+    "path": "/projects/discord-bot",
+    "carouselImages":  [
+
+    ],
+    "sections": [
       {
-        "linkName": "GitHub",
-        "url": "https://www.github.com/naeayedea/keith"
+        "title": "TITLE",
+        "content": "Since 2019, I have continued to develop and improve upon a general purpose discord bot. I have used the bot primarily as a method of improving my programming skills and it was first real project that I worked on. The bot code is event driven, utilising an API from the discord endpoint through the popular java-discord library JDA.\n\n Over the years I have built upon the bots functionality both user facing and internally. Currently, the bot can store information such as custom prefixes and user information in a database through custom database code which uses prepared statements for security. To interact with users, it uses a robust and powerful command interface which I have honed over time which allows for various access levels, subcommands and multiple input types such as reaction triggered commands. \n\n This project shows my journey as a software developer from my earliest java programs in 2019 to my latest work, I have preserved each version of keith in its own branch so that its easy to see the difference over the years, all three versions can be found at the github repository below:",
+        "image": "/images/logo512.png",
+        "links": [
+          {
+            "linkName": "GitHub",
+            "url": "https://www.github.com/naeayedea/keith"
+          }
+        ]
       }
     ]
-
-  },  {
+  },
+  {
     "title": "Simple Linux Shell (2020)",
-    "content": "As part of the class Computer Systems in Architecture during second year of my course, I was tasked with implementing a simple linux shell in an effort to achieve an appreciation for operating systems and the way users interact with them. \n\n The shell was written from scratch in C and had to meet a specification from our lecturer; features had to include: persistent history and aliases, history invocations, changing working directory, executing external commands and handling erroneous user input gracefully. \n\n This project gave me a deeper understanding of the C programming language, particularly with memory management whilst also allowing me to become more familiar with handling user input in an evolution of my work with the discord bot. Unfortunately the source code for the project is kept privately on a university instance of gitlab but it can be shared as part of my portfolio on request. ",
-    "image": "/images/shell.png",
+    "subTitle": "PLACEHOLDER",
+    "details": "A SHORTER SIMPLE SHELL DESCRIPTION",
+    "thumbnail": "/images/shell.png",
     "alt": "Examples of linux shell features such as aliases, running external commands and history invocations",
-    "links": [
+    "path": "/projects/simple-linux-shell",
+    "carouselImages":  [
 
-    ]
-  },  {
-    "title": "Web Design using React (2021 - present)",
-    "content": "In my third year of university I chose to enroll in an additional class outside of my required credit count as I find web development extremely interesting and satisfying. The class 'Web Applications Development' taught by Mark Dunlop exposed me to many languages and frameworks such as PHP, Javascript and React.js in addition to techniques and concerns such as responsive design, usability and security. \n\n When creating my final project, I was attracted to React as I appreciated the ability to create responsive websites with easy component reuse, something I found more tedious when using vanilla PHP. Over several weeks I created the website \"Cara's Art\" which mimics the web store of a fictional artist, Cara. I am very proud of the result and the final product received an almost perfect grade of 97%.\n\n I enjoy writing responsive css, taking great care to ensure that my sites look good on a wide range of devices. I styled the website completely from scratch utilising media queries to provide different layouts depending on the device. You are currently looking at further evidence of my web design work with React, I designed and implemented my portfolio website completely independently with the styling being written from scratch. Feel free to view Cara's Art and look at the source for this website at the following links: ",
-    "image": "/images/webapp.png",
-    "alt": "A screenshot of a website showing a side menu with eight paintings of different styles in a grid layout",
-    "links": [
+    ],
+    "sections": [
       {
-        "linkName": "Site Source Code",
-        "url": "https://www.github.com/naeayedea/portfolio"
-      },
-      {
-        "linkName": "Cara's Art",
-        "url": "https://devweb2021.cis.strath.ac.uk/ylb17138-nodejs/"
+        "title": "TITLE",
+        "content": "As part of the class Computer Systems in Architecture during second year of my course, I was tasked with implementing a simple linux shell in an effort to achieve an appreciation for operating systems and the way users interact with them. \n\n The shell was written from scratch in C and had to meet a specification from our lecturer; features had to include: persistent history and aliases, history invocations, changing working directory, executing external commands and handling erroneous user input gracefully. \n\n This project gave me a deeper understanding of the C programming language, particularly with memory management whilst also allowing me to become more familiar with handling user input in an evolution of my work with the discord bot. Unfortunately the source code for the project is kept privately on a university instance of gitlab but it can be shared as part of my portfolio on request.",
+        "image": "/images/logo512.png",
+        "links": []
       }
     ]
-  },  {
-    "title": "Haskell CSV Query Language (2021)",
-    "content": "I am extremely passionate about programming and I love learning new and interesting ways to write software. In third year, I had the option of choosing the class 'Functional Programming' which involved creating a CSV query language over several months after becoming familiar with Haskell concepts.\n\nI was supplied with an incomplete system that defined various parsers and empty functions. I chose to expand this system to take on an SQL-like syntax where the user could input a query and the system would evaluate it and return the results.\n\nExample queries are shown in the image, my final submission received respectable marks due to my custom testing framework and complete documentation.",
-    "image": "/images/haskell.png",
-    "alt": "Results from running a csv query from the project showing features that the final product had",
-    "links": [
+  },
+  {
+    "title": "Web Design using React (2021 - present)",
+    "details": "A SHORTER WEB DESIGN DESCRIPTION",
+    "subTitle": "PLACEHOLDER",
+    "thumbnail": "/images/webapp.png",
+    "alt": "A screenshot of a website showing a side menu with eight paintings of different styles in a grid layout",
+    "path": "/projects/web-design",
+    "carouselImages":  [
 
+    ],
+    "sections": [
+      {
+        "title": "TITLE",
+        "content": "In my third year of university I chose to enroll in an additional class outside of my required credit count as I find web development extremely interesting and satisfying. The class 'Web Applications Development' taught by Mark Dunlop exposed me to many languages and frameworks such as PHP, Javascript and React.js in addition to techniques and concerns such as responsive design, usability and security. \n\n When creating my final project, I was attracted to React as I appreciated the ability to create responsive websites with easy component reuse, something I found more tedious when using vanilla PHP. Over several weeks I created the website \"Cara's Art\" which mimics the web store of a fictional artist, Cara. I am very proud of the result and the final product received an almost perfect grade of 97%.\n\n I enjoy writing responsive css, taking great care to ensure that my sites look good on a wide range of devices. I styled the website completely from scratch utilising media queries to provide different layouts depending on the device. You are currently looking at further evidence of my web design work with React, I designed and implemented my portfolio website completely independently with the styling being written from scratch. Feel free to view Cara's Art and look at the source for this website at the following links: ",
+        "image": "/images/logo512.png",
+        "links": [
+          {
+            "linkName": "Site Source Code",
+            "url": "https://www.github.com/naeayedea/portfolio"
+          },
+          {
+            "linkName": "Cara's Art",
+            "url": "https://devweb2021.cis.strath.ac.uk/ylb17138-nodejs/"
+          }
+        ]
+      }
     ]
-  },  {
-    "title": "Java Thread Monitor (2021)",
-    "content": "This simple project was used to gain an appreciation of threading in Java, the tool ran on it's own thread and systematically retrieved information about other threads that were currently active. The thread monitor helped to understand concurrency issues as it was possible for threads to finish execution whilst the tool was retrieving information so synchronisation was important\n\nAs it was a relatively simple task, I choose to focus on the usability aspect of the GUI more, including several hotkeys, filtering by thread or group name and implementing a pause button. The colouring shown in the image was decided by hashing the group name and converting that to RGB values. The colours were then constrained to a luminosity range to ensure readability of the text.\n\nOverall, this project was very fun to undertake as it let me explore both threading and further improve my UX skills.",
-    "image": "/images/threadmonitor.png",
-    "alt": "A screenshot of the thread monitor project with several dummy threads with the base JVM threads shown with various pieces of information",
-    "links": [
+  },
+  {
+    "title": "Haskell CSV Query Language (2021)",
+    "subTitle": "PLACEHOLDER",
+    "details": "A SHORTER CSV QUERY LANG DESCRIPTION",
+    "thumbnail": "/images/haskell.png",
+    "alt": "Results from running a csv query from the project showing features that the final product had",
+    "path": "/projects/haskell-csv-query-language",
+    "carouselImages":  [
 
+    ],
+    "sections": [
+      {
+        "title": "TITLE",
+        "content": "I am extremely passionate about programming and I love learning new and interesting ways to write software. In third year, I had the option of choosing the class 'Functional Programming' which involved creating a CSV query language over several months after becoming familiar with Haskell concepts.\n\nI was supplied with an incomplete system that defined various parsers and empty functions. I chose to expand this system to take on an SQL-like syntax where the user could input a query and the system would evaluate it and return the results.\n\nExample queries are shown in the image, my final submission received respectable marks due to my custom testing framework and complete documentation.",
+        "image": "/images/logo512.png",
+        "links": []
+      }
+    ]
+  },
+  {
+    "title": "Java Thread Monitor (2021)",
+    "subTitle": "PLACEHOLDER",
+    "details": "A SHORTER THREAD MONITOR DESCRIPTION",
+    "thumbnail": "/images/threadmonitor.png",
+    "alt": "A screenshot of the thread monitor project with several dummy threads with the base JVM threads shown with various pieces of information",
+    "path": "/projects/java-thread-monitor",
+    "carouselImages":  [
+
+    ],
+    "sections": [
+      {
+        "title": "TITLE",
+        "content": "This simple project was used to gain an appreciation of threading in Java, the tool ran on it's own thread and systematically retrieved information about other threads that were currently active. The thread monitor helped to understand concurrency issues as it was possible for threads to finish execution whilst the tool was retrieving information so synchronisation was important\n\nAs it was a relatively simple task, I choose to focus on the usability aspect of the GUI more, including several hotkeys, filtering by thread or group name and implementing a pause button. The colouring shown in the image was decided by hashing the group name and converting that to RGB values. The colours were then constrained to a luminosity range to ensure readability of the text.\n\nOverall, this project was very fun to undertake as it let me explore both threading and further improve my UX skills.",
+        "image": "/images/logo512.png",
+        "links": []
+      }
     ]
   }
 ]

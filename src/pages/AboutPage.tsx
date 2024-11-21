@@ -1,0 +1,132 @@
+import React from 'react';
+import {AccentButton} from '../components/Button';
+import {personalDetails} from "../config/personalDetails";
+
+export default function AboutPage() {
+    return (
+        <div className="overflow-y-auto h-full">
+            <h1 className="text-4xl font-bold text-white mb-8">About Me</h1>
+            <div className="bg-white bg-opacity-90 rounded-lg shadow-lg p-8 space-y-8">
+                <section>
+                    <h2 className="text-2xl font-semibold text-blue-600 mb-4">Profile</h2>
+                    <p className="text-gray-800 mb-4">
+                        Hello, I'm {personalDetails.firstName}! I am a recent graduate with a Masters in Computer and
+                        Electronic Systems who loves developing solutions for new and interesting problems. I have a
+                        keen interest in and aptitude for software engineering and have experience with both frontend
+                        and backend technologies.
+                    </p>
+                    <p className="text-gray-800 mb-4">
+                        I have worked on some interesting projects including an autonomous alarm monitoring system which
+                        is able to identify arbitrary sounds in the environment and notify users when detected; and an
+                        automated spectrum licensing system designed to control spectrum access over a large
+                        geographical area such as local authorities or countries.
+                    </p>
+                </section>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <section className={"inline-block"}>
+                        <h2 className="text-2xl font-semibold text-blue-600 mb-4">Experience</h2>
+                        <div className="space-y-4">
+                            <div>
+                                <h3 className="text-xl font-medium text-gray-800">Graduate Software Engineer</h3>
+                                <p className="text-gray-600">ThinkAnalytics - July 2024 ~ Present</p>
+                                <p className={"pt-4"}>Key Takeaways</p>
+                                <ul className="list-disc list-inside text-gray-700 mt-2">
+                                    <li>Key Skill 1</li>
+                                    <li>Key Skill 2</li>
+                                    <li>Key Skill 3</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 className="text-xl font-medium text-gray-800">Internship - Software Engineer</h3>
+                                <p className="text-gray-600">ThinkAnalytics - June 2023 ~ September 2023</p>
+                                <p className={"pt-4"}>Key Takeaways</p>
+                                <ul className="list-disc list-inside text-gray-700 mt-2">
+                                    <li>Key Skill 1</li>
+                                    <li>Key Skill 2</li>
+                                    <li>Key Skill 3</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section className={"inline-block"}>
+                        <h2 className="text-2xl font-semibold text-blue-600 mb-4">Education</h2>
+                        <div className="space-y-4">
+                            <div>
+                                <h4 className="text-xl font-medium text-gray-800">Master of Engineering, Computer and
+                                    Electronic Systems</h4>
+                                <p className="text-gray-600">University of Strathclyde, Graduated 2024</p>
+                                <ul className="list-disc list-inside text-gray-700 mt-2">
+                                    <li>Graduated with Distinction</li>
+                                    <li>Credit Weighted Average 83.6%</li>
+                                    <li>Member of Student-Staff Liaison Committee</li>
+                                </ul>
+                                <p className={"pt-4"}>Short Description</p>
+                            </div>
+                            <div>
+                                <h3 className="text-xl font-medium text-gray-800">Secondary School</h3>
+                                <p className="text-gray-700 mt-2">While less relevant to my current work, I have
+                                    maintained an excellent track record throughout my life, achieving AAB at Advanced
+                                    Higher and AAAAB at Higher which I achieved while holding down a job at 16. I have a
+                                    natural aptitude for mathematics which is reflected in my strong grades as shown
+                                    below.
+                                </p>
+
+                                <h4 className="text-l font-medium text-gray-800 pt-4">Significant Grades</h4>
+                                <ul className="list-disc list-inside text-gray-700 mt-2">
+                                    <li>Advanced Higher Mathematics - A</li>
+                                    <li>Advanced Higher Physics - A</li>
+                                    <li>Higher Mathematics - A</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+
+                <section>
+                    <h2 className="text-2xl font-semibold text-blue-600 mb-4">Hobbies & Interests</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 className="text-xl font-medium text-gray-800 mb-2">Badminton</h3>
+                            <p className="text-gray-700">I am very passionate about badminton, since I was introduced to
+                                it in secondary school I haven't been able to get enough. In the past I helped manage a
+                                badminton club through my school which was a greatly rewarding experience. I am always
+                                looking for someone to play with and take great pleasure in the sport!s.</p>
+                        </div>
+                        <div>
+                            <h3 className="text-xl font-medium text-gray-800 mb-2">Reading</h3>
+                            <p className="text-gray-700">I am an avid reader, having loved books from a very young age.
+                                I enjoy many genres but I have a soft spot for high-tech science fiction such as Ender's
+                                Game and more recently the Skyward series by Brandon Sanderson. </p>
+                        </div>
+                        <div>
+                            <h3 className="text-xl font-medium text-gray-800 mb-2">Cars</h3>
+                            <p className="text-gray-700">I also have an interest in cars, from my very first driving
+                                lesson I became engrossed in them. I am not a mechanic by any stretch but I am extremely
+                                interested in the way cars work, particularly in their computing systems. The highly
+                                synchronous nature of cars is an interesting problem to approach computationally and the
+                                way that car manufacturers handle this is fascinating.</p>
+                        </div>
+                        <div>
+                            <h3 className="text-xl font-medium text-gray-800 mb-2">Cooking</h3>
+                            <p className="text-gray-700">Almost eight years as a chef gave me a love for cooking and the
+                                skills to back it up, I love all kinds of foods from different cultures and love new
+                                experiences.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <p className="text-gray-800 mb-6">
+                        I'm always eager to learn new technologies and tackle challenging problems. Feel free to
+                        reach
+                        out if you'd like to collaborate on a project or just chat about technology!
+                    </p>
+                    <AccentButton to="/contact">Get in Touch</AccentButton>
+                </section>
+            </div>
+        </div>
+    );
+}
