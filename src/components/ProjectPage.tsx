@@ -90,20 +90,22 @@ export default function ProjectPage({ title, description, headerImage, carouselI
                 {sections.map((section, index) => (
                     <div key={index} ref={sectionRefs.current[index]} className="mb-12">
                         <h2 className="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-200">{section.title}</h2>
-                        <div className="flex flex-col md:flex-row items-center">
-                            <div className={`md:w-1/2 mb-4 md:mb-0 md:mr-4 ${section.imageLeft ? "md:order-2" : ""}`}>
+                        <div className="flex flex-col md:flex-row">
+                            <div className={`md:w-1/2 mb-4 md:mb-0 md:mr-4 p-6 ${section.imageLeft ? "md:order-2" : ""}`}>
                                 <p className="text-gray-700 dark:text-gray-300">{section.content}</p>
                             </div>
                             <div className={`flex content-center justify-center md:w-1/2 relative group ${section.imageLeft ? "md:order-1" : ""}`} >
                                 <img
                                     src={section.image}
                                     alt={section.title}
-                                    className="w-full md:w-1/2 aspect-square object-cover rounded-lg select-none cursor-pointer"
+                                    className="w-full aspect-auto object-fit rounded-lg select-none cursor-pointer"
                                     onClick={() => openImage(index)}
                                 />
                                 <div
-                                    className="absolute bottom-1 right-1 md:right-1/4 flex items-center justify-center md:opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <ZoomIn className="text-gray-300" size={24}/>
+                                    className="absolute bottom-1 right-1 flex items-center justify-center md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer bg-opacity-30 bg-black rounded-md"
+                                    onClick={() => openImage(index)}
+                                >
+                                    <ZoomIn className="text-gray-100" size={24}/>
                                 </div>
                             </div>
                         </div>
