@@ -15,6 +15,7 @@ interface ProjectPageProps {
         content: string;
         image: string;
         links: { linkName: string, url: string}[]
+        imageLeft?: boolean;
     }[];
 }
 
@@ -90,17 +91,18 @@ export default function ProjectPage({ title, description, headerImage, carouselI
                     <div key={index} ref={sectionRefs.current[index]} className="mb-12">
                         <h2 className="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-200">{section.title}</h2>
                         <div className="flex flex-col md:flex-row items-center">
-                            <div className="md:w-1/2 mb-4 md:mb-0 md:mr-4">
+                            <div className={`md:w-1/2 mb-4 md:mb-0 md:mr-4 ${section.imageLeft ? "md:order-2" : ""}`}>
                                 <p className="text-gray-700 dark:text-gray-300">{section.content}</p>
                             </div>
-                            <div className="md:w-1/2 relative group cursor-pointer" onClick={() => openImage(index)}>
+                            <div className={`flex content-center justify-center md:w-1/2 relative group ${section.imageLeft ? "md:order-1" : ""}`} >
                                 <img
                                     src={section.image}
                                     alt={section.title}
-                                    className="w-full md:w-1/2 aspect-square object-cover rounded-lg select-none"
+                                    className="w-full md:w-1/2 aspect-square object-cover rounded-lg select-none cursor-pointer"
+                                    onClick={() => openImage(index)}
                                 />
                                 <div
-                                    className="absolute bottom-1 right-1 md:right-1/2 flex items-center justify-center md:opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    className="absolute bottom-1 right-1 md:right-1/4 flex items-center justify-center md:opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <ZoomIn className="text-gray-300" size={24}/>
                                 </div>
                             </div>
