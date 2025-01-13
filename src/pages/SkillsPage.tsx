@@ -22,12 +22,12 @@ export default function SkillsPage() {
             skills: ["JavaScript", "React", "TypeScript", "HTML5 & CSS3", "Tailwind CSS", "UX"]
         },
         {
-            title: "Programming Styles nad Architectures",
+            title: "Programming Styles and Architectures",
             skills: ["Object-Oriented Programming", "Functional Programming", "Procedural Programming", "Event-Driven Architecture", "Model-View-Controller Architecture"]
         },
         {
             title: "Soft Skills",
-            skills: ["React", "TypeScript", "HTML5 & CSS3", "Tailwind CSS", "UX"]
+            skills: ["Attention to Detail", "Communication", "Leadership", "Load Management"]
         },
     ];
 

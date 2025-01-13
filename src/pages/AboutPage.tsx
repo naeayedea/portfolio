@@ -1,5 +1,4 @@
 import React from 'react';
-import {AccentButton} from '../components/Button';
 import {personalDetails} from "../config/personalDetails";
 
 export default function AboutPage() {
@@ -30,11 +29,15 @@ export default function AboutPage() {
                             <div>
                                 <h3 className="text-xl font-medium text-gray-800 dark:text-gray-200">Graduate Software Engineer</h3>
                                 <p className="text-gray-600 dark:text-gray-400">ThinkAnalytics - July 2024 ~ Present</p>
-                                <p className={"dark:text-gray-100 pt-4"}>Key Takeaways</p>
+                                <p className={"dark:text-gray-100 pt-4"}>
+                                    After successfully completing my degree, I joined ThinkAnalytics as a Graduate Software
+                                    Engineer. My main responsibilities included integrating customer systems with TA Systems
+                                    and understanding customer requirements to leverage our software stack to its full potential.
+                                </p>
                                 <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 mt-2">
-                                    <li>Key Skill 1</li>
-                                    <li>Key Skill 2</li>
-                                    <li>Key Skill 3</li>
+                                    <li>Spring Boot</li>
+                                    <li>Customer Driven Development</li>
+                                    <li>AWS</li>
                                 </ul>
                             </div>
                             <div>
@@ -42,11 +45,16 @@ export default function AboutPage() {
                                     Software Engineer</h3>
                                 <p className="text-gray-600 dark:text-gray-400">ThinkAnalytics - June 2023 ~ September
                                     2023</p>
-                                <p className={"dark:text-gray-100 pt-4"}>Key Takeaways</p>
+                                <p className={"dark:text-gray-100 pt-4"}>
+                                    This internship was my first professional experience as a developer. I spent the
+                                    three months designing a chat box application using Amazon Lex to allow users
+                                    to create rails in a UI using free text. I learned a significant amount during
+                                    my internship at ThinkAnalytics including:
+                                </p>
                                 <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 mt-2">
-                                    <li>Key Skill 1</li>
-                                    <li>Key Skill 2</li>
-                                    <li>Key Skill 3</li>
+                                    <li>Spring Boot</li>
+                                    <li>Amazon Lex</li>
+                                    <li>React</li>
                                 </ul>
                             </div>
                         </div>
@@ -56,26 +64,33 @@ export default function AboutPage() {
                         <h2 className="text-2xl font-semibold text-blue-600 dark:text-blue-400 mb-4">Education</h2>
                         <div className="space-y-4">
                             <div>
-                                <h4 className="text-xl font-medium text-gray-800 dark:text-gray-200">Master of Engineering, Computer and
-                                    Electronic Systems</h4>
-                                <p className="text-gray-600 dark:text-gray-400">University of Strathclyde, Graduated 2024</p>
+                                <h4 className="text-xl font-medium text-gray-800 dark:text-gray-200">
+                                    Master of Engineering, Computer and Electronic Systems
+                                </h4>
+                                <p className="text-gray-600 dark:text-gray-400">
+                                    University of Strathclyde, Graduated 2024
+                                </p>
+                                <p className="text-gray-700 dark:text-gray-300 mt-2">
+                                    My degree is a combination of Electronic Engineering and Computer Science, over the
+                                    five years I learned about the world of computing from the silicon layers to the highest
+                                    levels of software engineering. Over time I gained an appreciation for software engineering
+                                    and found myself to have a strong aptitude for creating complex systems.
+                                </p>
                                 <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 mt-2">
                                     <li>Graduated with Distinction</li>
                                     <li>Credit Weighted Average 83.6%</li>
                                     <li>Member of Student-Staff Liaison Committee</li>
                                 </ul>
-                                <p className={"dark:text-gray-100 pt-4"}>Short Description</p>
                             </div>
                             <div>
                                 <h3 className="text-xl font-medium text-gray-800 dark:text-gray-200">Secondary School</h3>
-                                <p className="text-gray-700 dark:text-gray-300 mt-2">While less relevant to my current work, I have
-                                    maintained an excellent track record throughout my life, achieving AAB at Advanced
-                                    Higher and AAAAB at Higher which I achieved while holding down a job at 16. I have a
-                                    natural aptitude for mathematics which is reflected in my strong grades as shown
-                                    below.
+                                <p className="text-gray-700 dark:text-gray-300 mt-2">
+                                    While less relevant to my current work, I have maintained an excellent track record
+                                    throughout my life, achieving AAB at Advanced Higher and AAAAB at Higher which I
+                                    achieved while holding down a job at 16. I have a natural aptitude for mathematics
+                                    which is reflected in my strong grades as shown below.
                                 </p>
-
-                                <h4 className="text-l font-medium text-gray-800 pt-4">Significant Grades</h4>
+                                <h4 className="text-l font-medium text-gray-800 mt-2">Significant Grades</h4>
                                 <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 mt-2">
                                     <li>Advanced Higher Mathematics - A</li>
                                     <li>Advanced Higher Physics - A</li>
@@ -86,7 +101,6 @@ export default function AboutPage() {
                     </section>
                 </div>
 
-
                 <section>
                     <h2 className="text-2xl font-semibold text-blue-600 dark:text-blue-400 mb-4">Hobbies & Interests</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -95,7 +109,7 @@ export default function AboutPage() {
                             <p className="text-gray-700 dark:text-gray-300">I am very passionate about badminton, since I was introduced to
                                 it in secondary school I haven't been able to get enough. In the past I helped manage a
                                 badminton club through my school which was a greatly rewarding experience. I am always
-                                looking for someone to play with and take great pleasure in the sport!s.</p>
+                                looking for someone to play with and take great pleasure in the sport!</p>
                         </div>
                         <div>
                             <h3 className="text-xl font-medium text-gray-800 dark:text-gray-200 mb-2">Reading</h3>
@@ -120,13 +134,15 @@ export default function AboutPage() {
                     </div>
                 </section>
 
-                <section>
-                    <p className="text-gray-800 dark:text-gray-200 mb-6">
+                <section className={"mt-4"}>
+                    <h2 className="text-2xl font-semibold text-blue-600 dark:text-blue-400 mb-4">
+                        Get in Touch!
+                    </h2>
+                    <p className="text-gray-800 dark:text-gray-200 mb-4">
                         I'm always eager to learn new technologies and tackle challenging problems. Feel free to
-                        reach
-                        out if you'd like to collaborate on a project or just chat about technology!
+                        reach on GitHub or LinkedIn out if you'd like to collaborate on a project or just chat about
+                        technology!
                     </p>
-                    <AccentButton to="/contact">Get in Touch</AccentButton>
                 </section>
             </div>
         </div>

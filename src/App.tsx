@@ -1,5 +1,5 @@
 import React from 'react';
-import {HashRouter as Router, Route, Routes} from 'react-router-dom';
+import {HashRouter as Router, Navigate, Route, Routes} from 'react-router-dom';
 
 import Layout from "./components/Layout";
 import ProjectPage from "./components/ProjectPage";
@@ -25,7 +25,6 @@ function App() {
                         <Route path="/about" element={<Layout><AboutPage/></Layout>}/>
                         <Route path="/skills" element={<Layout><SkillsPage/></Layout>}/>
                         <Route path="/projects" element={<Layout><ProjectsPage/></Layout>}/>
-                        <Route path="/contact" element={<Layout><ContactPage/></Layout>}/>
 
                         {projects.map((project) => (
                             <Route key={project.title} path={project.path} element={
@@ -40,6 +39,8 @@ function App() {
                                 </Layout>
                             }/>
                         ))}
+
+                        <Route path={"*"} element={<Navigate to={"/"} replace/>} />
                     </Routes>
                 </Router>
             </ScrollProvider>
