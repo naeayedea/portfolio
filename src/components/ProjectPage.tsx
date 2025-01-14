@@ -14,7 +14,7 @@ interface ProjectPageProps {
         title: string;
         content: string;
         image: string;
-        links: { linkName: string, url: string}[]
+        links: { linkName: string, url: string, local?: boolean}[]
         imageLeft?: boolean;
     }[];
 }
@@ -61,16 +61,14 @@ export default function ProjectPage({ title, description, headerImage, carouselI
     };
 
     return (
-        <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
-            <div className="h-96 bg-cover bg-center" style={{ backgroundImage: `url(${headerImage})` }}>
+        <div className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+            <div className="h-96 bg-cover bg-left-top" style={{ backgroundImage: `url(${headerImage})` }}>
                 <div className="h-full flex items-center justify-center bg-black bg-opacity-50">
                     <h1 className="text-4xl font-bold text-white">{title}</h1>
                 </div>
             </div>
 
             <div className="container mx-auto px-4 py-8">
-                <p className="text-xl text-gray-700 dark:text-gray-300 mb-8">{description}</p>
-
                 {carouselImages.length > 0 &&
                     <div className="mb-12 relative">
                         <Slider ref={sliderRef} {...settings}>
@@ -116,25 +114,27 @@ export default function ProjectPage({ title, description, headerImage, carouselI
             {isImageOpen && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 cursor-zoom-out" onClick={closeImage}>
                     <button
-                        className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors duration-300"
+                        className="absolute top-4 right-4 cursor-zoom-out text-white hover:text-gray-300 transition-colors duration-300"
                         aria-label="Close image"
                         onClick={closeImage}
                     >
                         <X size={24}/>
                     </button>
-                    <div className="relative cursor-pointer" onClick={closeImage}>
-                        <img
-                            src={sections[currentImage].image}
-                            alt={sections[currentImage].title}
-                            className="max-w-full max-h-[90vh] object-contain select-none"
-                        />
-                        <button
-                            className="absolute bottom-4 right-4 text-white hover:text-gray-300 transition-colors duration-300"
-                            aria-label="Unzoom image"
-                            onClick={closeImage}
-                        >
-                            <ZoomOut size={24}/>
-                        </button>
+                    <div className="relative cursor-zoom-out rounded-md outline outline-2 outline-blue-600 outline-offset-4 dark:outline-blue-400" onClick={closeImage}>
+                        <div className={"max-w-[95vw] max-h-[95svh] rounded-md overflow-hidden"}>
+                            <img
+                                src={sections[currentImage].image}
+                                alt={sections[currentImage].title}
+                                className="select-none"
+                            />
+                            <button
+                                className="absolute bottom-1 right-1 xl:hidden cursor-zoom-out text-white hover:text-gray-300 transition-colors duration-300 bg-opacity-30 bg-black rounded-md"
+                                aria-label="Unzoom image"
+                                onClick={closeImage}
+                            >
+                                <ZoomOut size={16}/>
+                            </button>
+                        </div>
                     </div>
                 </div>
             )}

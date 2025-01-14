@@ -5,16 +5,36 @@
     "details": "An ESP32 driven audio detection device with a Node.js powered service to manage users/organisations and events from the devices",
     "thumbnail": "/logo512.png",
     "alt": "Placeholder Image",
-    "path": "/projects/5g-dynamic-licensing-system",
+    "path": "/projects/autonomous-alarm-system",
     "carouselImages": [
 
     ],
     "sections": [
       {
-        "title": "TITLE",
+        "title": "Introduction",
         "content": "CONTENT",
         "image": "/logo512.png",
         "links": []
+      },
+      {
+        "title": "Detection Algorithm",
+        "content": "CONTENT",
+        "image": "/logo512.png",
+        "links": [],
+        "imageLeft": true
+      },
+      {
+        "title": "Service Implementation",
+        "content": "CONTENT",
+        "image": "/logo512.png",
+        "links": []
+      },
+      {
+        "title": "Outcome",
+        "content": "CONTENT",
+        "image": "/logo512.png",
+        "links": [],
+        "imageLeft": true
       }
     ]
   },
@@ -22,7 +42,7 @@
     "title": "Dynamic Ad-Hoc Licensing for Private 5G Networks (2024)",
     "subTitle": "Masters Project | React/Java/Spring Boot/MySQL/Python",
     "details": "An end-to-end system designed to control the radio spectrum over a distributed geographic area. Primarily aimed at private 5G networks",
-    "thumbnail": "/logo512.png",
+    "thumbnail": "/images/ofcom-shared-access-examples.png",
     "alt": "Placeholder Image",
     "path": "/projects/5g-dynamic-licensing-system",
     "carouselImages":  [
@@ -30,53 +50,97 @@
     ],
     "sections": [
       {
-        "title": "TITLE",
+        "title": "Introduction",
         "content": "CONTENT",
-        "image": "/logo512.png",
+        "image": "/images/spectrum-potential.png",
+        "links": [],
+        "imageLeft": true
+      },
+      {
+        "title": "My Role",
+        "content": "CONTENT",
+        "image": "/images/licensing-system.png",
         "links": []
+      },
+      {
+        "title": "Spectrum Control",
+        "content": "CONTENT",
+        "image": "/images/licensing-system-log-output.png",
+        "links": []
+      },
+      {
+        "title": "Outcome",
+        "content": "CONTENT",
+        "image": "/images/licensing-system-map.png",
+        "links": [],
+        "imageLeft": true
       }
     ]
   },
   {
-    "title": "Boston Metro System (2022)",
-    "subTitle": "UI/Backend | JavaFX/Java",
-    "details": "A train-network frontend with support for routing between stations. Driven by Dijkstra's Algorithm",
-    "thumbnail": "/images/bostonmetro.png",
-    "alt": "Display of GUI depicting the Boston Metro System as part of the group project. There is a map of the system with a clock and route information",
-    "path": "/projects/boston-metro-system",
+    "title": "Tracker App (2025)",
+    "subTitle": "UI | React/NextJS/Tailwind",
+    "details": "A tracker for trackers, After getting bored of downloading apps to track a single data point, I created an app capable of supporting N trackers stored entirely in the browser.",
+    "thumbnail": "/images/tracker-example.png",
+    "alt": "A screenshot of another website I created which contains a calendar with data points chosen by the user.",
+    "path": "/projects/tracker-app",
     "carouselImages":  [
 
     ],
     "sections": [
       {
-        "title": "TITLE",
-        "content": "For this group project we were tasked with modelling the boston metro system with a backend that utilised a MultiGraph whilst abstracting specifics of the implementation through an API with a strict specification which was used by the GUI shown in the image.\n\nI was fully responsible for specifying, implementing and testing the MultiGraph code to a high quality which received excellent feedback from teaching staff. I made proper use of interface, generics and inheritance to produce a robust implementation which the rest of the system relied on.\n\nOverall, this project was a very enjoyable experience and I feel that I was able to make a full use of my programming skills, particularly with algorithms and utilising functional aspects of Java. You can view the javadocs for the final project at the following link:  ",
-        "image": "/images/bostonmetro.png",
+        "title": "Summary",
+        "content": "",
+        "image": "/images/tracker-example.png",
+        "links": []
+      }
+    ]
+  },
+  {
+    "title": "Web Design using React (2021 - present)",
+    "details": "Artist storefront website with associated backend + database",
+    "subTitle": "UI/Backend | React/Java/MySQL",
+    "thumbnail": "/images/portfolio.png",
+    "alt": "A screenshot of a website showing a side menu with eight paintings of different styles in a grid layout",
+    "path": "/projects/web-design",
+    "carouselImages":  [
+
+    ],
+    "sections": [
+      {
+        "title": "Portfolio Website",
+        "content": "",
+        "image": "/images/portfolio.png",
         "links": [
           {
-            "linkName": "Javadocs",
-            "url": "https://devweb2021.cis.strath.ac.uk/~ylb17138/308/build/docs/javadoc/"
+            "linkName": "Site Source Code",
+            "url": "https://www.github.com/naeayedea/portfolio"
           }
         ]
-      }
-    ]
-  },
-  {
-    "title": "Embedded C Application (2022)",
-    "subTitle": "Embedded | C",
-    "details": "An embedded C application running on an MSP430 to drive a contactless tachometer circuit",
-    "thumbnail": "/images/embedded.png",
-    "alt": "A code listing showing an example of an interrupt service routine used within the embedded microcontroller code",
-    "path": "/projects/embedded-c-application",
-    "carouselImages":  [
-
-    ],
-    "sections": [
+      },
       {
-        "title": "TITLE",
-        "content": "For the purposes of completing my degree, I took part in a group project to come up with, design and implement a hardware and software system that could demonstrate a key engineering principle. As a group we decided upon a simple tachometer which could demonstrate principles of measurement and control theory.\n\nI was responsible for the firmware in the project which received input from the PCB and converted the signals into a readable RPM for the user. I implemented a serial bluetooth command handler which stored characters in an array and utilised a map of strings to void function pointers which were ran when the correct string was received. The code for this ISR can be found in the image.\n\nThe firmware was relatively complex, needing to take into account the slow clock speed of the processor which was particularly interesting as the code had to be as efficient as possible to ensure rapid response times for interrupts whilst constantly supplying an attached mobile application with up to date RPM information. This project improved my understanding of C programming - particularly within low powered embedded systems.",
-        "image": "/images/embedded.png",
-        "links": []
+        "title": "Tracker Tracker",
+        "content": "",
+        "image": "/images/tracker-example.png",
+        "links": [
+          {
+            "linkName": "More on This",
+            "url": "/projects/tracker-app",
+            "local": true
+          }
+        ],
+        "imageLeft": true
+      },
+      {
+        "title": "Cara's Art",
+        "content": "In my third year of university I chose to enroll in an additional class outside of my required credit count as I find web development extremely interesting and satisfying. The class 'Web Applications Development' taught by Mark Dunlop exposed me to many languages and frameworks such as PHP, Javascript and React.js in addition to techniques and concerns such as responsive design, usability and security. \n\n When creating my final project, I was attracted to React as I appreciated the ability to create responsive websites with easy component reuse, something I found more tedious when using vanilla PHP. Over several weeks I created the website \"Cara's Art\" which mimics the web store of a fictional artist, Cara. I am very proud of the result and the final product received an almost perfect grade of 97%.\n\n I enjoy writing responsive css, taking great care to ensure that my sites look good on a wide range of devices. I styled the website completely from scratch utilising media queries to provide different layouts depending on the device.",
+        "image": "/images/webapp.png",
+        "links": [
+          {
+            "linkName": "Cara's Art",
+            "url": "https://devweb2021.cis.strath.ac.uk/ylb17138-nodejs/"
+          }
+        ]
       }
     ]
   },
@@ -101,6 +165,131 @@
             "url": "https://www.github.com/naeayedea/keith"
           }
         ]
+      },
+      {
+        "title": "Version 1 (August 2020)",
+        "content": "",
+        "image": "/images/keith.png",
+        "links": [
+          {
+            "linkName": "GitHub",
+            "url": "https://www.github.com/naeayedea/keith"
+          }
+        ]
+      },
+      {
+        "title": "Version 2 (September 2020)",
+        "content": "",
+        "image": "/images/keith.png",
+        "links": [
+          {
+            "linkName": "GitHub",
+            "url": "https://www.github.com/naeayedea/keith"
+          }
+        ],
+        "imageLeft": true
+      },
+      {
+        "title": "Version 3 (2021)",
+        "content": "",
+        "image": "/images/keith.png",
+        "links": [
+          {
+            "linkName": "GitHub",
+            "url": "https://www.github.com/naeayedea/keith"
+          }
+        ]
+      },
+      {
+        "title": "Version 4 (2024)",
+        "content": "",
+        "image": "/images/keith.png",
+        "links": [
+          {
+            "linkName": "GitHub",
+            "url": "https://www.github.com/naeayedea/keith"
+          }
+        ],
+        "imageLeft": true
+      }
+    ]
+  },
+  {
+    "title": "Boston Metro System (2022)",
+    "subTitle": "UI/Backend | JavaFX/Java",
+    "details": "A train-network frontend with support for routing between stations. Driven by Dijkstra's Algorithm",
+    "thumbnail": "/images/bostonmetro.png",
+    "alt": "Display of GUI depicting the Boston Metro System as part of the group project. There is a map of the system with a clock and route information",
+    "path": "/projects/boston-metro-system",
+    "carouselImages":  [
+
+    ],
+    "sections": [
+      {
+        "title": "Overview",
+        "content": "For this group project we were tasked with modelling the boston metro system with a backend that utilised a MultiGraph whilst abstracting specifics of the implementation through an API with a strict specification which was used by the GUI shown in the image.\n\nI was fully responsible for specifying, implementing and testing the MultiGraph code to a high quality which received excellent feedback from teaching staff. I made proper use of interface, generics and inheritance to produce a robust implementation which the rest of the system relied on.\n\nOverall, this project was a very enjoyable experience and I feel that I was able to make a full use of my programming skills, particularly with algorithms and utilising functional aspects of Java. You can view the javadocs for the final project at the following link:  ",
+        "image": "/images/bostonmetro.png",
+        "links": [
+          {
+            "linkName": "Javadocs",
+            "url": "https://devweb2021.cis.strath.ac.uk/~ylb17138/308/build/docs/javadoc/"
+          }
+        ]
+      },
+      {
+        "title": "MultiGraph Implementation",
+        "content": "",
+        "image": "/images/bostonmetro.png",
+        "links": [
+          {
+            "linkName": "Javadocs",
+            "url": "https://devweb2021.cis.strath.ac.uk/~ylb17138/308/build/docs/javadoc/"
+          }
+        ],
+        "imageLeft": true
+      },
+      {
+        "title": "UI (JavaFX)",
+        "content": "",
+        "image": "/images/bostonmetro.png",
+        "links": [
+          {
+            "linkName": "Javadocs",
+            "url": "https://devweb2021.cis.strath.ac.uk/~ylb17138/308/build/docs/javadoc/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Embedded C Application (2022)",
+    "subTitle": "Embedded | C",
+    "details": "An embedded C application running on an MSP430 to drive a contactless tachometer circuit",
+    "thumbnail": "/images/embedded.png",
+    "alt": "A code listing showing an example of an interrupt service routine used within the embedded microcontroller code",
+    "path": "/projects/embedded-c-application",
+    "carouselImages":  [
+
+    ],
+    "sections": [
+      {
+        "title": "Introduction",
+        "content": "For the purposes of completing my degree, I took part in a group project to come up with, design and implement a hardware and software system that could demonstrate a key engineering principle. As a group we decided upon a simple tachometer which could demonstrate principles of measurement and control theory.\n\nI was responsible for the firmware in the project which received input from the PCB and converted the signals into a readable RPM for the user. I implemented a serial bluetooth command handler which stored characters in an array and utilised a map of strings to void function pointers which were ran when the correct string was received. The code for this ISR can be found in the image.\n\nThe firmware was relatively complex, needing to take into account the slow clock speed of the processor which was particularly interesting as the code had to be as efficient as possible to ensure rapid response times for interrupts whilst constantly supplying an attached mobile application with up to date RPM information. This project improved my understanding of C programming - particularly within low powered embedded systems.",
+        "image": "/images/embedded.png",
+        "links": []
+      },
+      {
+        "title": "Hardware",
+        "content": "",
+        "image": "/images/embedded.png",
+        "links": [],
+        "imageLeft": true
+      },
+      {
+        "title": "Firmware",
+        "content": "",
+        "image": "/images/embedded.png",
+        "links": []
       }
     ]
   },
@@ -124,34 +313,6 @@
     ]
   },
   {
-    "title": "Web Design using React (2021 - present)",
-    "details": "Artist storefront website with associated backend + database",
-    "subTitle": "UI/Backend | React/Java/MySQL",
-    "thumbnail": "/images/webapp.png",
-    "alt": "A screenshot of a website showing a side menu with eight paintings of different styles in a grid layout",
-    "path": "/projects/web-design",
-    "carouselImages":  [
-
-    ],
-    "sections": [
-      {
-        "title": "TITLE",
-        "content": "In my third year of university I chose to enroll in an additional class outside of my required credit count as I find web development extremely interesting and satisfying. The class 'Web Applications Development' taught by Mark Dunlop exposed me to many languages and frameworks such as PHP, Javascript and React.js in addition to techniques and concerns such as responsive design, usability and security. \n\n When creating my final project, I was attracted to React as I appreciated the ability to create responsive websites with easy component reuse, something I found more tedious when using vanilla PHP. Over several weeks I created the website \"Cara's Art\" which mimics the web store of a fictional artist, Cara. I am very proud of the result and the final product received an almost perfect grade of 97%.\n\n I enjoy writing responsive css, taking great care to ensure that my sites look good on a wide range of devices. I styled the website completely from scratch utilising media queries to provide different layouts depending on the device. You are currently looking at further evidence of my web design work with React, I designed and implemented my portfolio website completely independently with the styling being written from scratch. Feel free to view Cara's Art and look at the source for this website at the following links: ",
-        "image": "/images/webapp.png",
-        "links": [
-          {
-            "linkName": "Site Source Code",
-            "url": "https://www.github.com/naeayedea/portfolio"
-          },
-          {
-            "linkName": "Cara's Art",
-            "url": "https://devweb2021.cis.strath.ac.uk/ylb17138-nodejs/"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "title": "Haskell CSV Query Language (2021)",
     "subTitle": "CLI Application | Haskell",
     "details": "A command line CSV query language implementation written in Haskell",
@@ -166,25 +327,6 @@
         "title": "Summary",
         "content": "I am extremely passionate about programming and I love learning new and interesting ways to write software. In third year, I had the option of choosing the class 'Functional Programming' which involved creating a CSV query language over several months after becoming familiar with Haskell concepts.\n\nI was supplied with an incomplete system that defined various parsers and empty functions. I chose to expand this system to take on an SQL-like syntax where the user could input a query and the system would evaluate it and return the results.\n\nExample queries are shown in the image, my final submission received respectable marks due to my custom testing framework and complete documentation.",
         "image": "/images/haskell.png",
-        "links": []
-      }
-    ]
-  },
-  {
-    "title": "Java Thread Monitor (2021)",
-    "subTitle": "UI | Java/AWT",
-    "details": "A simple AWT application that monitors all threads in an application",
-    "thumbnail": "/images/threadmonitor.png",
-    "alt": "A screenshot of the thread monitor project with several dummy threads with the base JVM threads shown with various pieces of information",
-    "path": "/projects/java-thread-monitor",
-    "carouselImages":  [
-
-    ],
-    "sections": [
-      {
-        "title": "Summary",
-        "content": "This simple project was used to gain an appreciation of threading in Java, the tool ran on it's own thread and systematically retrieved information about other threads that were currently active. The thread monitor helped to understand concurrency issues as it was possible for threads to finish execution whilst the tool was retrieving information so synchronisation was important\n\nAs it was a relatively simple task, I choose to focus on the usability aspect of the GUI more, including several hotkeys, filtering by thread or group name and implementing a pause button. The colouring shown in the image was decided by hashing the group name and converting that to RGB values. The colours were then constrained to a luminosity range to ensure readability of the text.\n\nOverall, this project was very fun to undertake as it let me explore both threading and further improve my UX skills.",
-        "image": "/images/threadmonitor.png",
         "links": []
       }
     ]
