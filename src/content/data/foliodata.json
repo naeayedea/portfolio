@@ -12,27 +12,27 @@
     "sections": [
       {
         "title": "Introduction",
-        "content": "CONTENT",
+        "content": "Many research labs hold expensive samples which require careful temperature control, or they will expire, causing a loss of time, effort, and money. Equipment used to store these samples often have alarms built-in, but the samples may still degrade if nobody is nearby to hear them. A product which could autonomously monitor unmanned research labs would allow for early detection of problems, potentially saving the samples stored in the equipment, and provide a timeline of failure which may otherwise be missed.\nThe core of this project was to design and implement an alarm system which could automatically detect known alarm signals in an arbitrary recording. This required a recording device (ESP32 (pictured) + simple microphone) equipped with an algorithm that can extract the key characteristics of an audio signal and compare that to what is present in the environment. Upon detecting a signal, the system generates a log with enough information to create a timeline of failure for the device that triggered the alarm; and contact the responsible user(s) to indicate that an alarm has been detected.",
         "image": "/images/alarm-system/esp32.png",
         "links": []
       },
       {
         "title": "Detection Algorithm",
-        "content": "CONTENT",
-        "image": "/logo512.png",
+        "content": "I implemented a custom audio detection algorithm designed to effectively detect the presence of a known (but arbitrary) audio signal, even in the presence of other audio sources/noise. This algorithm involved storing a vector of audio characteristics gathered from an FFT of the audio signal, I used my knowledge of signals to extract this key information from the source audio file which then allowed the microcontroller to perform the same calculations against environmental noise to check for similarity.\nIf a recording was considered to be similar enough, and the signal was detected in N subsequent time periods, then an alarm was detected, The device then contacted the central alarm system to notify of an alarm event, and also transmitted the last audio buffer it had stored to allow the user to rule out any false positives.\nThe image shows an example of a stored FFT vs the environment, whilst this was an extremely loud audio signal for dramatic effect, the power of matching signal characteristics to a known audio signal is obvious.",
+        "image": "/images/alarm-system/fft.png",
         "links": [],
         "imageLeft": true
       },
       {
         "title": "Service Implementation",
-        "content": "CONTENT",
-        "image": "/logo512.png",
+        "content": "The central server is the true core of the alarm system, whilst the devices are essential for the detection of alarms, without the server there would be nowhere to store the information and users would have a tough time retrieving and analysing the data. Accessed through an API, the server is solely responsible for the business logic of the system, i.e., storage of critical information, access control, communication policies, user accounts, and authentication. This logic is what converts the solution to a true service which could feasibly be used in a real-world environment.\nThe server exposes a rich API which allows for a wide range of functionality such as: altering and viewing device configuration; retrieving logs; and providing control information such as remotely restarting devices. I implemented this using the ExpressJS framework which allowed for quickly getting the infrastructure off of the ground through the use of existing middleware.",
+        "image": "/images/alarm-system/alarm-log.png",
         "links": []
       },
       {
         "title": "Outcome",
-        "content": "CONTENT",
-        "image": "/logo512.png",
+        "content": "This project was a success, and I received positive feedback from my assessors and supervisor with a grade of 86%. I was able to demonstrate that my detection algorithm was 99% accurate as long as enough of the audio signal was stronger than the environmental noise.\nI thoroughly enjoyed tackling this challenge and think it demonstrates my ability to breakdown problems into well defined tasks which then allows me to provide robust and novel solutions.\nI also identified several avenues of future work including polishing the product for market use, increasing the number of audio signals that can be stored/detected by a single device, and implementing additional detection algorithms including machine learning.",
+        "image": "/images/alarm-system/alarm-notification.png",
         "links": [],
         "imageLeft": true
       }
@@ -51,26 +51,26 @@
     "sections": [
       {
         "title": "Introduction",
-        "content": "CONTENT",
+        "content": "All radio communications in the UK must be licensed and operating within the constraints and legal  limits defined by the communications regulator, Ofcom. In 2019, Ofcom introduced a new framework for shared spectrum access known as the Shared Access licence which offers up to 400 MHz of 5G suitable spectrum for private individuals and organisations to reserve in a limited geographic area.\nWhilst this is a significant step forward, our team recognised that are some flaws in the system including response times of several weeks, no recourse for interference, and a confusing application process. We set out to fix these issues over the course of six months.\nA critical feature that we wanted to support was \"sub-netting\" spectrum. For example, if our university was responsible for 60 MHz they could then sub-license their allocation to departments on campus. This process could be applied at any aggregation such as continents, nations, local authorities, etc. ",
         "image": "/images/licensing-system/spectrum-potential.png",
         "links": [],
         "imageLeft": true
       },
       {
         "title": "My Role",
-        "content": "CONTENT",
+        "content": "My role in this product was the primary developer on the backend systems, I was responsible for ensuring our API met the requirements of the customer (our industry partner) whilst also ensuring that all features of the existing application process such as geographical exclusions were maintained.\nI designed the system from the ground up and came up with a novel approach to spectrum management that can theoretically manage an infinite geographical area through the use of Geographical Information System data and intelligent processing algorithms\nMy favourite feature is the decision chaining process which allows the system to process each application in stages, with a \"negative\" and a \"positive\" flow. The system first rules out any reasons why it *cannot* give out a license, and then it greedily tries to find a reason why it *can* give a license to reduce the amount of processing time required. For example, a license in a rural area with no-one for 50 miles requires less checks than a license in central London I truly enjoyed solving problems for this project as its an interesting problem space with ample room for innovation.",
         "image": "/images/licensing-system/licensing-system.png",
         "links": []
       },
       {
         "title": "Spectrum Control",
-        "content": "CONTENT",
+        "content": "In the context of the licensing system, concurrency was used to process more than one application at a time, which would be an essential feature if the system was deployed by Ofcom and shared access licences saw an increased demand. Therefore, there had to  be robust concurrency protections in place to prevent two licences from being assigned the same spectrum if they are within interfering distance of each other. These checks are performed at significant stages of the decision process known as \"critical sections\".\nAn example of such control is shown in the image, which demonstrates a scenario where five applications were placed for the same frequency range (product) at the exact same latitude and longitude. It is easy to see that the system recognizes this as a problem and only processes each product in a configurable radius one at a time. However, if a request came outside of this radius then the system would process both simultaneously. You can also see from the logs that each application received a unique allocation within the specified geographical area without any conflicting licenses. This was an essential quality the system had to demonstrate to be considered suitable.",
         "image": "/images/licensing-system/licensing-system-log-output.png",
         "links": []
       },
       {
         "title": "Outcome",
-        "content": "CONTENT",
+        "content": "The developed system was shown to be a viable solution to the described problem with all objectives fully satisfied. The system was found to be novel due to the high degree ofconfigurability that is offered by the spectrum management component in that the system can feasibly be recursively deployed by lower tiers of users to manage their own licence internally, such as a university sublicensing its spectrum allocations to various departments. This licensing system also received positive feedback when presented to Ofcom for its thorough implementation and flexibility.\nIf I was allowed more time to refine this project I would have worked on the scalability of the system through the use of distributed consensus algorithms to allow N number of license processing servers to communicate globally, this could be enhanced by geographical clustering to allow the system to locally ensure no license collisions whilst eventually achieving a global truth.",
         "image": "/images/licensing-system/licensing-system-map.png",
         "links": [],
         "imageLeft": true
@@ -90,9 +90,18 @@
     "sections": [
       {
         "title": "Summary",
-        "content": "",
+        "content": "I became annoyed with the number of apps who dedicate themselves to tracking a single, or a handful of metrics. Most of them do the same thing with the only thing changing is the data or labels. I decided to tackle this by implementing a tracker app which can track any number of user defined trackers in a simple to use yet powerful interface. In the interest of privacy I designed the app to use local storage to ensure that people are entirely in control of their own data.\nThis is a relatively new side project of mine and I plan on adding additional features such as local encryption (essentially a local login that decrypts the content from local storage), additional tracker types such as number inputs, and potentially a managed version with support for tracking on multiple devices.",
         "image": "/images/tracker-app/tracker-example.png",
-        "links": []
+        "links": [
+          {
+            "linkName": "Try Me",
+            "url": "https://naeayedea.github.io/tracker-app"
+          },
+          {
+            "linkName": "Source Code",
+            "url": "https://www.github.com/naeayedea/tracker-app"
+          }
+        ]
       }
     ]
   },
@@ -109,18 +118,18 @@
     "sections": [
       {
         "title": "Portfolio Website",
-        "content": "",
+        "content": "I created this website to serve as a showcase of my notable projects and work. It also serves as a good overview of my ability to create easy to use, and most importantly responsive websites. One of my biggest frustrations is websites that do not look good on a wide variety of screens, so I always strive to make my own projects fully responsive.\nI primarily used React 18, React Router 6, and TailwindCSS to create the website you are currently looking at.",
         "image": "/images/web-design/portfolio.png",
         "links": [
           {
-            "linkName": "Site Source Code",
+            "linkName": "Source Code",
             "url": "https://www.github.com/naeayedea/portfolio"
           }
         ]
       },
       {
         "title": "Tracker Tracker",
-        "content": "",
+        "content": "I became annoyed with the number of apps who dedicate themselves to tracking a single, or a handful of metrics. Most of them do the same thing with the only thing changing is the data or labels. I decided to tackle this by implementing a tracker app which can track any number of user defined trackers in a simple to use yet powerful interface. I designed this app using ReactJS built with Vite and then deployed using gh-pages as it is a simple static app (for now).\nThis was a really simply yet fun project that let me keep my UI/UX skills up to date whilst creating something I use regularly.",
         "image": "/images/tracker-app/tracker-example.png",
         "links": [
           {
@@ -168,7 +177,7 @@
       },
       {
         "title": "Version 1 (August 2020)",
-        "content": "[basic java understanding, still learning, first real java project, lots of bugs]",
+        "content": "[WORK IN PROGRESS]\n[basic java understanding, still learning, first real java project, lots of bugs]",
         "image": "/images/keith/keithv1.png",
         "links": [
           {
@@ -180,7 +189,7 @@
       },
       {
         "title": "Version 2 (September 2020)",
-        "content": "[quick learner, improved command processor to use map, started considering permissions]",
+        "content": "[WORK IN PROGRESS]\n[quick learner, improved command processor to use map, started considering permissions]",
         "image": "/images/keith/keithv2.png",
         "links": [
           {
@@ -192,7 +201,7 @@
       },
       {
         "title": "Version 3 (2021)",
-        "content": "[powerful command framework, channel commands, rate limiting, prepared statements/database improvements]",
+        "content": "[WORK IN PROGRESS]\n[powerful command framework, channel commands, rate limiting, prepared statements/database improvements]",
         "image": "/images/keith/keithv3.png",
         "links": [
           {
@@ -204,7 +213,7 @@
       },
       {
         "title": "Version 4 (2024)",
-        "content": "[Spring Boot, Slash Commands, Translations]",
+        "content": "[WORK IN PROGRESS]\n[Spring Boot, Slash Commands, Translations]",
         "image": "/images/keith/keithv4.png",
         "links": [
           {
@@ -213,53 +222,6 @@
           }
         ],
         "imageLeft": false
-      }
-    ]
-  },
-  {
-    "title": "Boston Metro System (2022)",
-    "subTitle": "UI/Backend | JavaFX/Java",
-    "details": "A train-network frontend with support for routing between stations. Driven by Dijkstra's Algorithm",
-    "thumbnail": "/images/bostonmetro.png",
-    "alt": "Display of GUI depicting the Boston Metro System as part of the group project. There is a map of the system with a clock and route information",
-    "path": "/projects/boston-metro-system",
-    "carouselImages":  [
-
-    ],
-    "sections": [
-      {
-        "title": "Overview",
-        "content": "For this group project we were tasked with modelling the boston metro system with a backend that utilised a MultiGraph whilst abstracting specifics of the implementation through an API with a strict specification which was used by the GUI shown in the image.\n\nI was fully responsible for specifying, implementing and testing the MultiGraph code to a high quality which received excellent feedback from teaching staff. I made proper use of interface, generics and inheritance to produce a robust implementation which the rest of the system relied on.\n\nOverall, this project was a very enjoyable experience and I feel that I was able to make a full use of my programming skills, particularly with algorithms and utilising functional aspects of Java. You can view the javadocs for the final project at the following link:  ",
-        "image": "/images/bostonmetro.png",
-        "links": [
-          {
-            "linkName": "Javadocs",
-            "url": "https://devweb2021.cis.strath.ac.uk/~ylb17138/308/build/docs/javadoc/"
-          }
-        ]
-      },
-      {
-        "title": "MultiGraph Implementation",
-        "content": "",
-        "image": "/images/bostonmetro.png",
-        "links": [
-          {
-            "linkName": "Javadocs",
-            "url": "https://devweb2021.cis.strath.ac.uk/~ylb17138/308/build/docs/javadoc/"
-          }
-        ],
-        "imageLeft": true
-      },
-      {
-        "title": "UI (JavaFX)",
-        "content": "",
-        "image": "/images/bostonmetro.png",
-        "links": [
-          {
-            "linkName": "Javadocs",
-            "url": "https://devweb2021.cis.strath.ac.uk/~ylb17138/308/build/docs/javadoc/"
-          }
-        ]
       }
     ]
   },
@@ -291,6 +253,38 @@
         "title": "Firmware",
         "content": "",
         "image": "/images/embedded.png",
+        "links": []
+      }
+    ]
+  },
+  {
+    "title": "Boston Metro System (2022)",
+    "subTitle": "UI/Backend | JavaFX/Java",
+    "details": "A train-network frontend with support for routing between stations. Driven by Dijkstra's Algorithm",
+    "thumbnail": "/images/bostonmetro.png",
+    "alt": "Display of GUI depicting the Boston Metro System as part of the group project. There is a map of the system with a clock and route information",
+    "path": "/projects/boston-metro-system",
+    "carouselImages":  [
+
+    ],
+    "sections": [
+      {
+        "title": "Overview",
+        "content": "For this group project we were tasked with modelling the boston metro system with a backend that utilised a MultiGraph whilst abstracting specifics of the implementation through an API with a strict specification which was used by the GUI shown in the image.\n\nI was fully responsible for specifying, implementing and testing the MultiGraph code to a high quality which received excellent feedback from teaching staff. I made proper use of interface, generics and inheritance to produce a robust implementation which the rest of the system relied on.\n\nOverall, this project was a very enjoyable experience and I feel that I was able to make a full use of my programming skills, particularly with algorithms and utilising functional aspects of Java. You can view the javadocs for the final project at the following link:  ",
+        "image": "/images/bostonmetro.png",
+        "links": []
+      },
+      {
+        "title": "MultiGraph Implementation",
+        "content": "[WORK IN PROGRESS]",
+        "image": "/images/bostonmetro.png",
+        "links": [],
+        "imageLeft": true
+      },
+      {
+        "title": "UI (JavaFX)",
+        "content": "[WORK IN PROGRESS]",
+        "image": "/images/bostonmetro.png",
         "links": []
       }
     ]

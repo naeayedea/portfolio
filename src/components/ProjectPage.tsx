@@ -166,7 +166,7 @@ const ImageDialog = ({sections, currentImageIndex, closeImage}: {sections: Proje
 
 const SectionLinks = ({links, sectionName}: {sectionName:string, links: ProjectPageLink[] }) => {
     return (<>
-        <h2 className="text-lg font-bold mb-1 text-gray-800 dark:text-gray-200">More On This</h2>
+        <h2 className="text-lg font-bold mt-2 mb-1 m text-gray-800 dark:text-gray-200">More On This</h2>
         {links.map((link, index) => <div className={"inline"} key={"section-"+sectionName+"-link-set-"+index}>
             {link.local && <InternalLink to={link.url} type={"text"} key={"sectionName-local-"+link.linkName + index}>{link.linkName}</InternalLink>}
             {link.local || <ExternalLink href={link.url} type={"text"} key={"sectionName-external-"+link.linkName + index}>{link.linkName}</ExternalLink>}
