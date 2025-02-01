@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import {Image, Menu, X} from 'lucide-react';
 
 import { ThemeToggle } from "./ThemeToggle";
 
@@ -17,11 +17,7 @@ export default function Header() {
     return (
         <header className="bg-white dark:bg-gray-800 bg-opacity-90 text-gray-800 dark:text-white py-4 shadow-md z-50">
             <div className="container mx-auto px-4 flex justify-between items-center">
-                <Link to="/" className="flex items-center z-50">
-                    <img src="https://avatars.githubusercontent.com/u/70326670" alt="Profile"
-                         className="w-10 h-10 rounded-full mr-3 select-none"/>
-                    <span className="text-2xl font-bold text-blue-600 dark:text-blue-400">{personalDetails.name}</span>
-                </Link>
+                <ImageAndTitle className={"z-50"}/>
                 <ThemeToggle />
                 <button
                     className="md:hidden ml-4 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
@@ -35,12 +31,9 @@ export default function Header() {
           md:static md:bg-transparent md:transform-none
           ${isMenuOpen ? 'translate-y-0' : '-translate-y-full md:translate-y-0'}
         `}>
-                    <div className="container mx-auto px-4 py-4 md:py-0">
-                        <div className="flex justify-between items-center mb-8 md:hidden">
-                            <Link to="/" className="flex items-center" onClick={toggleMenu}>
-                                <img src="/placeholder.svg?height=40&width=40" alt="Profile" className="w-10 h-10 rounded-full mr-3" />
-                                <span className="text-2xl font-bold text-blue-600 dark:text-blue-400">{personalDetails.name}</span>
-                            </Link>
+                    <div className="container mx-auto px-4 py-4 md:py-0 max-h-screen h-screen flex flex-col lg:flex-none lg:h-auto">
+                        <div className="flex justify-between items-center mb-8">
+                            <ImageAndTitle className={"opacity-0"}/>
                             <button
                                 className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                                 onClick={toggleMenu}
@@ -49,7 +42,7 @@ export default function Header() {
                                 <X size={24} />
                             </button>
                         </div>
-                        <ul className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8">
+                        <ul className="flex flex-col flex-grow lg:flex-auto md:flex-row space-y-4 md:space-y-0 md:space-x-8 overflow-y-auto h-fit lg:h-auto">
                             <li><Link to="/" className="block py-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors" onClick={toggleMenu}>Home</Link></li>
                             <li><Link to="/about" className="block py-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors" onClick={toggleMenu}>About</Link></li>
                             <li><Link to="/skills" className="block py-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors" onClick={toggleMenu}>Skills</Link></li>
@@ -63,4 +56,14 @@ export default function Header() {
             </div>
         </header>
     );
+}
+
+const ImageAndTitle = ({className}: {className?: string}) => {
+    return (
+        <Link to="/" className={`flex items-center ${className}`}>
+            <img src="https://avatars.githubusercontent.com/u/70326670" alt="Profile"
+                 className="w-10 h-10 rounded-full mr-3 select-none"/>
+            <span className="text-2xl font-bold text-blue-600 dark:text-blue-400">{personalDetails.name}</span>
+        </Link>
+    )
 }
