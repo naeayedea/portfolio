@@ -61,9 +61,9 @@ export default function ProjectPage({ title, description, headerImage, carouselI
     };
 
     return (
-        <div className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+        <div className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 rounded-lg overflow-hidden">
             <div className="h-96 bg-cover bg-left-top" style={{ backgroundImage: `url(${headerImage})` }}>
-                <div className="h-full flex items-center justify-center bg-black bg-opacity-50">
+                <div className="h-full flex items-center justify-center bg-black bg-opacity-20 dark:bg-opacity-40">
                     <h1 className="text-4xl font-bold text-white">{title}</h1>
                 </div>
             </div>
@@ -96,7 +96,7 @@ export default function ProjectPage({ title, description, headerImage, carouselI
                                 <img
                                     src={section.image}
                                     alt={section.title}
-                                    className="w-full aspect-auto object-fit rounded-lg select-none cursor-pointer"
+                                    className="w-full aspect-auto object-fit rounded-lg select-none cursor-pointer hover:opacity-70 dark:hover:opacity-80"
                                     onClick={() => openImage(index)}
                                 />
                                 <div
@@ -120,12 +120,12 @@ export default function ProjectPage({ title, description, headerImage, carouselI
                     >
                         <X size={24}/>
                     </button>
-                    <div className="relative cursor-zoom-out rounded-md outline outline-2 outline-blue-600 outline-offset-4 dark:outline-blue-400" onClick={closeImage}>
-                        <div className={"max-w-[95vw] max-h-[95svh] rounded-md overflow-hidden"}>
+                    <div className="relative cursor-zoom-out rounded-md outline outline-2 outline-blue-600 outline-offset-1 lg:outline-offset-4 dark:outline-blue-400" onClick={closeImage}>
+                        <div className={"max-w-[95svw] max-h-[95svh] 2xl:max-w-[60svw] rounded-md overflow-hidden"}>
                             <img
                                 src={sections[currentImage].image}
                                 alt={sections[currentImage].title}
-                                className="select-none"
+                                className="select-none w-svw aspect-auto"
                             />
                             <button
                                 className="absolute bottom-1 right-1 xl:hidden cursor-zoom-out text-white hover:text-gray-300 transition-colors duration-300 bg-opacity-30 bg-black rounded-md"
