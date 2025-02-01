@@ -76,8 +76,8 @@ export default function ProjectPage({ title, description, headerImage, carouselI
     return (
         <div className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 rounded-lg overflow-hidden">
             <div className="h-96 bg-cover bg-left-top" style={{ backgroundImage: `url(${headerImage})` }}>
-                <div className="h-full flex items-center justify-center bg-black bg-opacity-20 dark:bg-opacity-40">
-                    <h1 className="text-md xs:text-xl sm:text-2xl lg:text-4xl font-bold text-white">{title}</h1>
+                <div className="h-full flex items-center justify-center bg-black bg-opacity-60">
+                    <h1 className="text-md xs:text-xl sm:text-2xl lg:text-4xl font-bold text-white text-center">{title}</h1>
                 </div>
             </div>
 
@@ -103,8 +103,8 @@ export default function ProjectPage({ title, description, headerImage, carouselI
                         <h2 className="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-200">{section.title}</h2>
                         <div className="flex flex-col md:flex-row">
                             <div className={`md:w-1/2 mb-4 md:mb-0 md:mr-4 p-6 ${section.imageLeft ? "md:order-2" : ""}`}>
-                                <SectionContent className={"text-gray-700 dark:text-gray-300 mb-4"} content={section.content}/>
-                                {section.links?.length > 0 && <SectionLinks links={section.links} />}
+                                <SectionContent content={section.content}/>
+                                {section.links?.length > 0 && <SectionLinks sectionName={section.title} links={section.links} />}
                             </div>
                             <div
                                 className={`flex content-center justify-center md:w-1/2 relative group ${section.imageLeft ? "md:order-1" : ""} hover:opacity-70 dark:hover:opacity-80`} >
@@ -164,22 +164,22 @@ const ImageDialog = ({sections, currentImageIndex, closeImage}: {sections: Proje
     )
 }
 
-const SectionLinks = ({links}: { links: ProjectPageLink[] }) => {
+const SectionLinks = ({links, sectionName}: {sectionName:string, links: ProjectPageLink[] }) => {
     return (<>
         <h2 className="text-lg font-bold mb-1 text-gray-800 dark:text-gray-200">More On This</h2>
-        {links.map((link, index) => <>
-            {link.local &&
-                <InternalLink to={link.url} type={"text"} key={link.linkName + index}>{link.linkName}</InternalLink>}
-            {link.local ||
-                <ExternalLink href={link.url} type={"text"} key={link.linkName + index}>{link.linkName}</ExternalLink>}
-            {index + 1 < links.length && <span> | </span>}
-        </>)}
+        {links.map((link, index) => <div className={"inline"} key={"section-"+sectionName+"-link-set-"+index}>
+            {link.local && <InternalLink to={link.url} type={"text"} key={"sectionName-local-"+link.linkName + index}>{link.linkName}</InternalLink>}
+            {link.local || <ExternalLink href={link.url} type={"text"} key={"sectionName-external-"+link.linkName + index}>{link.linkName}</ExternalLink>}
+            {index + 1 < links.length && <span key={"pipe-sep-"+index} className={"text-gray-800 dark:text-gray-200"}> | </span>}
+        </div>)}
     </>)
 }
 
 
-const SectionContent = ({className, content}: { className: string, content: string }) => {
+const SectionContent = ({content}: { content: string }) => {
+    const paragraphs = content.replaceAll('\n*', "\n").split("\n")
+
     return (<>
-        {content.replaceAll('\n*', "\n").split("\n").map(paragraph => <p className={className}>{paragraph}</p>)}
+        {paragraphs.map((paragraph, index) => <p key={"paragraph"+index} className={`text-gray-700 dark:text-gray-300 ${index + 1 < paragraphs.length ? "mb-4" : ""}`}>{paragraph}</p>)}
     </>)
 }
