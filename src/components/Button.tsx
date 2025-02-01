@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { InternalLink } from './Link';
 
 interface ButtonProps {
     children: React.ReactNode;
@@ -39,7 +39,7 @@ export const Button: React.FC<ButtonProps> = ({
     const styles = `${baseStyles} ${getStyles()} ${className}`;
 
     if (to) {
-        return <Link to={to} className={styles}>{children}</Link>;
+        return <InternalLink to={to} className={styles}>{children}</InternalLink>;
     }
 
     if (href) {

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Github, Linkedin, Mail } from 'lucide-react';
 import { personalDetails, getCurrentYear } from '../config/personalDetails';
+import { ExternalLink } from "./Link";
 
 export default function Footer() {
     return (
@@ -8,12 +9,12 @@ export default function Footer() {
             <div className="container mx-auto px-4 flex flex-col lg:flex-row justify-between items-center">
                 <p>&copy; {getCurrentYear()} {personalDetails.name}. All rights reserved.</p>
                 <nav className="flex space-x-4 mt-4 lg:mt-0">
-                    <a href={personalDetails.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                    <ExternalLink href={personalDetails.github} aria-label="GitHub">
                         <Github className="w-6 h-6" />
-                    </a>
-                    <a href={personalDetails.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                    </ExternalLink>
+                    <ExternalLink href={personalDetails.linkedin} aria-label="LinkedIn">
                         <Linkedin className="w-6 h-6" />
-                    </a>
+                    </ExternalLink>
                 </nav>
             </div>
         </footer>

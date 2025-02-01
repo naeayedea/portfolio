@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import {Image, Menu, X} from 'lucide-react';
+import { InternalLink } from './Link';
+import { Menu, X } from 'lucide-react';
 
 import { ThemeToggle } from "./ThemeToggle";
 
 import { personalDetails} from "../config/personalDetails";
-import {useScreenBreakpoint} from "../hooks/useScreenBreakpoint";
+import { useScreenBreakpoint } from "../hooks/useScreenBreakpoint";
 
 
 export default function Header() {
@@ -34,10 +34,10 @@ export default function Header() {
                             <ImageAndTitle className={"opacity-0"}/>
                         </div>
                         <ul className="flex flex-col flex-grow md:flex-auto md:flex-row space-y-4 md:space-y-0 md:space-x-8 overflow-y-auto h-fit lg:h-auto">
-                            <li><Link to="/" className="block py-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors" onClick={toggleMenu}>Home</Link></li>
-                            <li><Link to="/about" className="block py-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors" onClick={toggleMenu}>About</Link></li>
-                            <li><Link to="/skills" className="block py-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors" onClick={toggleMenu}>Skills</Link></li>
-                            <li><Link to="/projects" className="block py-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors" onClick={toggleMenu}>Projects</Link></li>
+                            <li><InternalLink to="/" className="block py-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors" onClick={toggleMenu}>Home</InternalLink></li>
+                            <li><InternalLink to="/about" className="block py-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors" onClick={toggleMenu}>About</InternalLink></li>
+                            <li><InternalLink to="/skills" className="block py-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors" onClick={toggleMenu}>Skills</InternalLink></li>
+                            <li><InternalLink to="/projects" className="block py-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors" onClick={toggleMenu}>Projects</InternalLink></li>
                         </ul>
                     </div>
                 </nav>
@@ -51,9 +51,9 @@ export default function Header() {
 
 const ImageAndTitle = ({className}: {className?: string}) => {
     return (
-        <Link to="/" className={`flex items-center ${className}`}>
+        <InternalLink to="/" className={`flex items-center ${className}`}>
             <img src="https://avatars.githubusercontent.com/u/70326670" alt="Profile" className="w-6 xs:w-8 sm:w-10 aspect-square rounded-full mr-3 select-none"/>
             <span className="text-l xs:text-xl sm:text-2xl font-bold text-blue-600 dark:text-blue-400">{personalDetails.name}</span>
-        </Link>
+        </InternalLink>
     )
 }
