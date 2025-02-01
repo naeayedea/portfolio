@@ -7,19 +7,28 @@ import {useScreenBreakpoint} from "../hooks/useScreenBreakpoint";
 import {useMediaQuery} from "react-responsive";
 import {ExternalLink, InternalLink} from "./Link";
 
+interface ProjectPageLink {
+    linkName: string;
+    url: string;
+    local?: boolean;
+}
+
+interface ProjectPageSection {
+    title: string;
+    content: string;
+    image: string;
+    links: ProjectPageLink[]
+    imageLeft?: boolean;
+}
 interface ProjectPageProps {
     title: string;
     description: string;
     headerImage: string;
     carouselImages: string[];
-    sections: {
-        title: string;
-        content: string;
-        image: string;
-        links: { linkName: string, url: string, local?: boolean}[]
-        imageLeft?: boolean;
-    }[];
+    sections: ProjectPageSection[];
 }
+
+
 
 export default function ProjectPage({ title, description, headerImage, carouselImages, sections }: ProjectPageProps) {
     const [currentImage, setCurrentImage] = useState(0);
@@ -94,15 +103,8 @@ export default function ProjectPage({ title, description, headerImage, carouselI
                         <h2 className="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-200">{section.title}</h2>
                         <div className="flex flex-col md:flex-row">
                             <div className={`md:w-1/2 mb-4 md:mb-0 md:mr-4 p-6 ${section.imageLeft ? "md:order-2" : ""}`}>
-                                <p className="text-gray-700 dark:text-gray-300">{section.content}</p>
-                                {section.links?.length > 0 && <>
-                                    <h2 className="text-lg font-bold mb-1 text-gray-800 dark:text-gray-200">More On This</h2>
-                                    {section.links.map((link, index) => <>
-                                        {link.local && <InternalLink to={link.url} type={"text"} key={link.linkName + index}>{link.linkName}</InternalLink>}
-                                        {link.local || <ExternalLink href={link.url} type={"text"} key={link.linkName + index}>{link.linkName}</ExternalLink>}
-                                        {index + 1 < section.links.length && <span> | </span>}
-                                    </>)}
-                                </>}
+                                <SectionContent className={"text-gray-700 dark:text-gray-300 mb-4"} content={section.content}/>
+                                {section.links?.length > 0 && <SectionLinks links={section.links} />}
                             </div>
                             <div
                                 className={`flex content-center justify-center md:w-1/2 relative group ${section.imageLeft ? "md:order-1" : ""} hover:opacity-70 dark:hover:opacity-80`} >
@@ -124,33 +126,60 @@ export default function ProjectPage({ title, description, headerImage, carouselI
                 ))}
             </div>
 
-            {isImageOpen && (
-                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 cursor-zoom-out" onClick={closeImage}>
-                    <button
-                        className="absolute top-4 right-4 cursor-zoom-out text-white hover:text-gray-300 transition-colors duration-300"
-                        aria-label="Close image"
-                        onClick={closeImage}
-                    >
-                        <X size={24}/>
-                    </button>
-                    <div className="relative cursor-zoom-out rounded-md outline outline-2 outline-blue-600 outline-offset-1 lg:outline-offset-4 dark:outline-blue-400" onClick={closeImage}>
-                        <div className={"max-w-[95svw] max-h-[95svh] 2xl:max-w-[60svw] rounded-md overflow-hidden"}>
-                            <img
-                                src={sections[currentImage].image}
-                                alt={sections[currentImage].title}
-                                className="select-none w-svw aspect-auto"
-                            />
-                            <button
-                                className="absolute bottom-1 right-1 xl:hidden cursor-zoom-out text-white hover:text-gray-300 transition-colors duration-300 bg-opacity-30 bg-black rounded-md"
-                                aria-label="Unzoom image"
-                                onClick={closeImage}
-                            >
-                                <ZoomOut size={16}/>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            )}
+            {isImageOpen && <ImageDialog sections={sections} closeImage={closeImage} currentImageIndex={currentImage} />}
         </div>
     );
+}
+
+const ImageDialog = ({sections, currentImageIndex, closeImage}: {sections: ProjectPageSection[], currentImageIndex: number, closeImage: () => void | undefined}) => {
+    return (
+        <div className="fixed inset-0 bg-black bg-opacity-90 dark:bg-opacity-80 flex items-center justify-center z-50 cursor-zoom-out"
+             onClick={closeImage}>
+            <button
+                className="absolute top-4 right-4 cursor-zoom-out text-white hover:text-gray-300 transition-colors duration-300"
+                aria-label="Close image"
+                onClick={closeImage}
+            >
+                <X size={24}/>
+            </button>
+            <div
+                className="relative cursor-zoom-out rounded-md outline outline-2 outline-blue-600 outline-offset-1 lg:outline-offset-4 dark:outline-blue-400"
+                onClick={closeImage}>
+                <div className={"max-w-[95svw] max-h-[95svh] 2xl:max-w-[60svw] rounded-md overflow-hidden"}>
+                    <img
+                        src={sections[currentImageIndex].image}
+                        alt={sections[currentImageIndex].title}
+                        className="select-none w-svw aspect-auto"
+                    />
+                    <button
+                        className="absolute bottom-1 right-1 xl:hidden cursor-zoom-out text-white hover:text-gray-300 transition-colors duration-300 bg-opacity-30 bg-black rounded-md"
+                        aria-label="Unzoom image"
+                        onClick={closeImage}
+                    >
+                        <ZoomOut size={16}/>
+                    </button>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+const SectionLinks = ({links}: { links: ProjectPageLink[] }) => {
+    return (<>
+        <h2 className="text-lg font-bold mb-1 text-gray-800 dark:text-gray-200">More On This</h2>
+        {links.map((link, index) => <>
+            {link.local &&
+                <InternalLink to={link.url} type={"text"} key={link.linkName + index}>{link.linkName}</InternalLink>}
+            {link.local ||
+                <ExternalLink href={link.url} type={"text"} key={link.linkName + index}>{link.linkName}</ExternalLink>}
+            {index + 1 < links.length && <span> | </span>}
+        </>)}
+    </>)
+}
+
+
+const SectionContent = ({className, content}: { className: string, content: string }) => {
+    return (<>
+        {content.replaceAll('\n*', "\n").split("\n").map(paragraph => <p className={className}>{paragraph}</p>)}
+    </>)
 }
