@@ -3,9 +3,9 @@ import {personalDetails} from "../config/personalDetails";
 
 export default function AboutPage() {
     return (
-        <div className="overflow-y-auto h-full">
-            <h1 className="text-4xl font-bold text-white dark:text-gray-100 mb-8">About Me</h1>
-            <div className="bg-white dark:bg-gray-800 bg-opacity-90 rounded-lg shadow-lg p-8 space-y-8">
+        <div className="overflow-y-auto">
+            <h1 className="text-4xl font-bold text-white dark:text-gray-100 mb-2 md:mb-8">About Me</h1>
+            <div className="bg-white dark:bg-gray-800 bg-opacity-90 rounded-lg shadow-lg p-4 md:p-8 space-y-8">
                 <section>
                     <h2 className="text-2xl font-semibold text-blue-600 dark:text-blue-400 mb-4">Profile</h2>
                     <p className="text-gray-800 dark:text-gray-200 mb-4">
@@ -114,8 +114,8 @@ export default function AboutPage() {
                         <div>
                             <h3 className="text-xl font-medium text-gray-800 dark:text-gray-200 mb-2">Reading</h3>
                             <p className="text-gray-700 dark:text-gray-300">I am an avid reader, having loved books from a very young age.
-                                I enjoy many genres but I have a soft spot for high-tech science fiction such as Ender's
-                                Game and more recently the Skyward series by Brandon Sanderson. </p>
+                                I enjoy many genres but I particularly enjoy science fiction novels such as The Forever War by Joe Haldeman
+                                and the Cosmere universe from Brandon Sanderson.</p>
                         </div>
                         <div>
                             <h3 className="text-xl font-medium text-gray-800 dark:text-gray-200 mb-2">Cars</h3>

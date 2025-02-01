@@ -3,7 +3,8 @@ import Slider from 'react-slick';
 import { ZoomIn, ZoomOut, X } from 'lucide-react';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import '../styles/ProjectPage.css';
+import {useScreenBreakpoint} from "../hooks/useScreenBreakpoint";
+import {useMediaQuery} from "react-responsive";
 
 interface ProjectPageProps {
     title: string;
@@ -24,6 +25,8 @@ export default function ProjectPage({ title, description, headerImage, carouselI
     const [isImageOpen, setIsImageOpen] = useState(false);
     const sectionRefs = useRef(sections.map(() => React.createRef<HTMLDivElement>()));
     const sliderRef = useRef<Slider>(null);
+    const { isAbove } = useScreenBreakpoint("xs")
+    const isTouchEnabled = useMediaQuery({query: `(pointer: coarse)`});
 
     useEffect(() => {
         const handleEscKey = (event: KeyboardEvent) => {
@@ -64,7 +67,7 @@ export default function ProjectPage({ title, description, headerImage, carouselI
         <div className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 rounded-lg overflow-hidden">
             <div className="h-96 bg-cover bg-left-top" style={{ backgroundImage: `url(${headerImage})` }}>
                 <div className="h-full flex items-center justify-center bg-black bg-opacity-20 dark:bg-opacity-40">
-                    <h1 className="text-4xl font-bold text-white">{title}</h1>
+                    <h1 className="text-md xs:text-xl sm:text-2xl lg:text-4xl font-bold text-white">{title}</h1>
                 </div>
             </div>
 
@@ -92,18 +95,18 @@ export default function ProjectPage({ title, description, headerImage, carouselI
                             <div className={`md:w-1/2 mb-4 md:mb-0 md:mr-4 p-6 ${section.imageLeft ? "md:order-2" : ""}`}>
                                 <p className="text-gray-700 dark:text-gray-300">{section.content}</p>
                             </div>
-                            <div className={`flex content-center justify-center md:w-1/2 relative group ${section.imageLeft ? "md:order-1" : ""}`} >
+                            <div className={`flex content-center justify-center md:w-1/2 relative group ${section.imageLeft ? "md:order-1" : ""} hover:opacity-70 dark:hover:opacity-80`} >
                                 <img
                                     src={section.image}
                                     alt={section.title}
-                                    className="w-full aspect-auto object-fit rounded-lg select-none cursor-pointer hover:opacity-70 dark:hover:opacity-80"
+                                    className="w-full aspect-auto object-fit rounded-lg select-none cursor-pointer"
                                     onClick={() => openImage(index)}
                                 />
                                 <div
-                                    className="absolute bottom-1 right-1 flex items-center justify-center md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer bg-opacity-30 bg-black rounded-md"
+                                    className={`absolute bottom-1 right-1 flex items-center justify-center ${isTouchEnabled ? "opacity-100" : "opacity-0"} group-hover:opacity-100 transition-opacity duration-300 cursor-pointer bg-opacity-30 bg-black rounded-md z-50`}
                                     onClick={() => openImage(index)}
                                 >
-                                    <ZoomIn className="text-gray-100" size={24}/>
+                                    <ZoomIn className="text-gray-100" size={isAbove ? 24 : 16}/>
                                 </div>
                             </div>
                         </div>

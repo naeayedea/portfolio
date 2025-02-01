@@ -33,8 +33,8 @@ export default function SkillsPage() {
 
     return (
         <>
-            <h1 className="text-4xl font-bold text-white dark:text-gray-100 mb-8">My Skills</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+            <h1 className="text-4xl font-bold text-white dark:text-gray-100 mb-2 md:mb-8">My Skills</h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2 md:gap-8">
                 {skillSets.map((skillSet, index) => (
                     <SkillCard key={index} title={skillSet.title} skills={skillSet.skills}/>
                 ))}

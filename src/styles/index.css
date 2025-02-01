@@ -7,3 +7,9 @@
         content-visibility: hidden;
     }
 }
+
+@layer components {
+    .scrollbar-gutter-stable {
+        scrollbar-gutter: stable;
+    }
+}
