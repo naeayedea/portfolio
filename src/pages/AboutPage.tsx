@@ -1,5 +1,6 @@
 import React from 'react';
 import {personalDetails} from "../config/personalDetails";
+import {ExternalLink} from "../components/Link";
 
 export default function AboutPage() {
     return (
@@ -140,7 +141,7 @@ export default function AboutPage() {
                     </h2>
                     <p className="text-gray-800 dark:text-gray-200 mb-4">
                         I'm always eager to learn new technologies and tackle challenging problems. Feel free to
-                        reach on GitHub or LinkedIn out if you'd like to collaborate on a project or just chat about
+                        reach out on <ExternalLink href={personalDetails.github} aria-label={"My GitHub"} type={"text"}>GitHub</ExternalLink> or <ExternalLink href={personalDetails.linkedin} aria-label={"My LinkedIn"} type={"text"}>LinkedIn</ExternalLink>  if you'd like to collaborate on a project or just chat about
                         technology!
                     </p>
                 </section>
