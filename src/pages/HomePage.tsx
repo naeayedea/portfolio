@@ -11,7 +11,7 @@ export default function HomePage() {
                 <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
                     <PrimaryButton to="/projects">View Projects</PrimaryButton>
                     <SecondaryButton to="/about">About Me</SecondaryButton>
-                    <SecondaryButton to="/contact">Contact Me</SecondaryButton>
+                    <SecondaryButton to="/skills">My Skills</SecondaryButton>
                 </div>
             </section>
         </div>
