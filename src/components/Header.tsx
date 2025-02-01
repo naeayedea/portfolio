@@ -31,9 +31,9 @@ export default function Header() {
           md:static md:bg-transparent md:transform-none
           ${isMenuOpen ? 'translate-y-0' : '-translate-y-full md:translate-y-0'}
         `}>
-                    <div className="container mx-auto px-4 py-4 md:py-0 max-h-screen h-screen flex flex-col lg:flex-none lg:h-auto">
-                        <div className="flex justify-between items-center mb-8">
-                            <ImageAndTitle className={"opacity-0"}/>
+                    <div className="container mx-auto px-4 py-4 md:py-0 max-h-screen h-screen flex flex-col md:flex-none md:h-auto">
+                        <div className="flex justify-between items-center mb-8 md:hidden">
+                            <ImageAndTitle className={"opacity-0 "}/>
                             <button
                                 className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                                 onClick={toggleMenu}
@@ -42,7 +42,7 @@ export default function Header() {
                                 <X size={24} />
                             </button>
                         </div>
-                        <ul className="flex flex-col flex-grow lg:flex-auto md:flex-row space-y-4 md:space-y-0 md:space-x-8 overflow-y-auto h-fit lg:h-auto">
+                        <ul className="flex flex-col flex-grow md:flex-auto md:flex-row space-y-4 md:space-y-0 md:space-x-8 overflow-y-auto h-fit lg:h-auto">
                             <li><Link to="/" className="block py-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors" onClick={toggleMenu}>Home</Link></li>
                             <li><Link to="/about" className="block py-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors" onClick={toggleMenu}>About</Link></li>
                             <li><Link to="/skills" className="block py-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors" onClick={toggleMenu}>Skills</Link></li>
