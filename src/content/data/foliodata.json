@@ -13,7 +13,7 @@
       {
         "title": "Introduction",
         "content": "CONTENT",
-        "image": "/logo512.png",
+        "image": "/images/esp32.png",
         "links": []
       },
       {
@@ -98,7 +98,7 @@
   },
   {
     "title": "Web Design using React (2021 - present)",
-    "details": "Artist storefront website with associated backend + database",
+    "details": "A collection of my web design work over the years",
     "subTitle": "UI/Backend | React/Java/MySQL",
     "thumbnail": "/images/portfolio.png",
     "alt": "A screenshot of a website showing a side menu with eight paintings of different styles in a grid layout",
@@ -156,7 +156,7 @@
     ],
     "sections": [
       {
-        "title": "TITLE",
+        "title": "Introduction",
         "content": "Since 2019, I have continued to develop and improve upon a general purpose discord bot. I have used the bot primarily as a method of improving my programming skills and it was first real project that I worked on. The bot code is event driven, utilising an API from the discord endpoint through the popular java-discord library JDA.\n\n Over the years I have built upon the bots functionality both user facing and internally. Currently, the bot can store information such as custom prefixes and user information in a database through custom database code which uses prepared statements for security. To interact with users, it uses a robust and powerful command interface which I have honed over time which allows for various access levels, subcommands and multiple input types such as reaction triggered commands. \n\n This project shows my journey as a software developer from my earliest java programs in 2019 to my latest work, I have preserved each version of keith in its own branch so that its easy to see the difference over the years, all three versions can be found at the github repository below:",
         "image": "/images/keith.png",
         "links": [
@@ -168,49 +168,51 @@
       },
       {
         "title": "Version 1 (August 2020)",
-        "content": "",
-        "image": "/images/keith.png",
+        "content": "[basic java understanding, still learning, first real java project, lots of bugs]",
+        "image": "/images/keithv1.png",
         "links": [
           {
             "linkName": "GitHub",
-            "url": "https://www.github.com/naeayedea/keith"
+            "url": "https://github.com/naeayedea/keith/tree/v1"
           }
-        ]
+        ],
+        "imageLeft": true
       },
       {
         "title": "Version 2 (September 2020)",
-        "content": "",
-        "image": "/images/keith.png",
+        "content": "[quick learner, improved command processor to use map, started considering permissions]",
+        "image": "/images/keithv2.png",
         "links": [
           {
             "linkName": "GitHub",
-            "url": "https://www.github.com/naeayedea/keith"
+            "url": "https://github.com/naeayedea/keith/tree/v2"
           }
         ],
-        "imageLeft": true
+        "imageLeft": false
       },
       {
         "title": "Version 3 (2021)",
-        "content": "",
-        "image": "/images/keith.png",
+        "content": "[powerful command framework, channel commands, rate limiting, prepared statements/database improvements]",
+        "image": "/images/keithv3.png",
         "links": [
           {
             "linkName": "GitHub",
-            "url": "https://www.github.com/naeayedea/keith"
-          }
-        ]
-      },
-      {
-        "title": "Version 4 (2024)",
-        "content": "",
-        "image": "/images/keith.png",
-        "links": [
-          {
-            "linkName": "GitHub",
-            "url": "https://www.github.com/naeayedea/keith"
+            "url": "https://github.com/naeayedea/keith/tree/v3"
           }
         ],
         "imageLeft": true
+      },
+      {
+        "title": "Version 4 (2024)",
+        "content": "[Spring Boot, Slash Commands, Translations]",
+        "image": "/images/keithv4.png",
+        "links": [
+          {
+            "linkName": "GitHub",
+            "url": "https://github.com/naeayedea/keith/tree/v4"
+          }
+        ],
+        "imageLeft": false
       }
     ]
   },
