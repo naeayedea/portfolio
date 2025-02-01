@@ -5,6 +5,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import {useScreenBreakpoint} from "../hooks/useScreenBreakpoint";
 import {useMediaQuery} from "react-responsive";
+import {ExternalLink, InternalLink} from "./Link";
 
 interface ProjectPageProps {
     title: string;
@@ -94,8 +95,17 @@ export default function ProjectPage({ title, description, headerImage, carouselI
                         <div className="flex flex-col md:flex-row">
                             <div className={`md:w-1/2 mb-4 md:mb-0 md:mr-4 p-6 ${section.imageLeft ? "md:order-2" : ""}`}>
                                 <p className="text-gray-700 dark:text-gray-300">{section.content}</p>
+                                {section.links?.length > 0 && <>
+                                    <h2 className="text-lg font-bold mb-1 text-gray-800 dark:text-gray-200">More On This</h2>
+                                    {section.links.map((link, index) => <>
+                                        {link.local && <InternalLink to={link.url} type={"text"} key={link.linkName + index}>{link.linkName}</InternalLink>}
+                                        {link.local || <ExternalLink href={link.url} type={"text"} key={link.linkName + index}>{link.linkName}</ExternalLink>}
+                                        {index + 1 < section.links.length && <span> | </span>}
+                                    </>)}
+                                </>}
                             </div>
-                            <div className={`flex content-center justify-center md:w-1/2 relative group ${section.imageLeft ? "md:order-1" : ""} hover:opacity-70 dark:hover:opacity-80`} >
+                            <div
+                                className={`flex content-center justify-center md:w-1/2 relative group ${section.imageLeft ? "md:order-1" : ""} hover:opacity-70 dark:hover:opacity-80`} >
                                 <img
                                     src={section.image}
                                     alt={section.title}
