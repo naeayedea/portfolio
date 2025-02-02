@@ -51,7 +51,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     }, [handleScroll, setScrollPosition]);
 
     return (
-        <div className="flex flex-col w-dvw h-dvh overflow-hidden">
+        <div className="flex flex-col w-svw h-svh overflow-hidden">
             <Header />
             <main ref={mainRef} className="flex flex-col flex-grow overflow-y-auto scrollbar-gutter-stable bg-gradient-to-br from-blue-400 to-purple-500 dark:from-blue-800 dark:to-purple-900 max-w-full w-svw xl:w-auto">
                 <div className="container mx-auto p-1 md:p-2 lg:p-4 flex-grow w-full">
