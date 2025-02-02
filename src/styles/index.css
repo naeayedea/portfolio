@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    .content-auto {
+        content-visibility: hidden;
+    }
+}
+
+@layer components {
+    .scrollbar-gutter-stable {
+        scrollbar-gutter: stable;
+    }
+}

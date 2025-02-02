@@ -1,73 +1,330 @@
 [
   {
-    "title": "Boston Metro System (2022)",
-    "content": "For this group project we were tasked with modelling the boston metro system with a backend that utilised a MultiGraph whilst abstracting specifics of the implementation through an API with a strict specification which was used by the GUI shown in the image.\n\nI was fully responsible for specifying, implementing and testing the MultiGraph code to a high quality which received excellent feedback from teaching staff. I made proper use of interface, generics and inheritance to produce a robust implementation which the rest of the system relied on.\n\nOverall, this project was a very enjoyable experience and I feel that I was able to make a full use of my programming skills, particularly with algorithms and utilising functional aspects of Java. You can view the javadocs for the final project at the following link:  ",
-    "image": "/images/bostonmetro.png",
-    "alt": "Display of GUI depicting the Boston Metro System as part of the group project. There is a map of the system with a clock and route information",
-    "links": [
-      {
-      "linkName": "Javadocs",
-      "url": "https://devweb2021.cis.strath.ac.uk/~ylb17138/308/build/docs/javadoc/"
-      }
-    ]
-  },  {
-    "title": "Embedded C Application (2022)",
-    "content": "For the purposes of completing my degree, I took part in a group project to come up with, design and implement a hardware and software system that could demonstrate a key engineering principle. As a group we decided upon a simple tachometer which could demonstrate principles of measurement and control theory.\n\nI was responsible for the firmware in the project which received input from the PCB and converted the signals into a readable RPM for the user. I implemented a serial bluetooth command handler which stored characters in an array and utilised a map of strings to void function pointers which were ran when the correct string was received. The code for this ISR can be found in the image.\n\nThe firmware was relatively complex, needing to take into account the slow clock speed of the processor which was particularly interesting as the code had to be as efficient as possible to ensure rapid response times for interrupts whilst constantly supplying an attached mobile application with up to date RPM information. This project improved my understanding of C programming - particularly within low powered embedded systems.  ",
-    "image": "/images/embedded.png",
-    "alt": "A code listing showing an example of an interrupt service routine used within the embedded microcontroller code",
-    "links": [
+    "title": "Autonomous Alarm Monitoring System (2023)",
+    "subTitle": "Honours Project | React/Node/C/C++",
+    "details": "An ESP32 driven audio detection device with a Node.js powered service to manage users/organisations and events from the devices",
+    "thumbnail": "/portfolio/images/alarm-system/esp32.png",
+    "alt": "Placeholder Image",
+    "path": "/projects/autonomous-alarm-system",
+    "carouselImages": [
 
-    ]
-  },  {
-    "title": "Discord Bot (2019 - present)",
-    "content": "Since 2019, I have continued to develop and improve upon a general purpose discord bot. I have used the bot primarily as a method of improving my programming skills and it was first real project that I worked on. The bot code is event driven, utilising an API from the discord endpoint through the popular java-discord library JDA.\n\n Over the years I have built upon the bots functionality both user facing and internally. Currently, the bot can store information such as custom prefixes and user information in a database through custom database code which uses prepared statements for security. To interact with users, it uses a robust and powerful command interface which I have honed over time which allows for various access levels, subcommands and multiple input types such as reaction triggered commands. \n\n This project shows my journey as a software developer from my earliest java programs in 2019 to my latest work, I have preserved each version of keith in its own branch so that its easy to see the difference over the years, all three versions can be found at the github repository below:",
-    "image": "/images/keith.png",
-    "alt": "Examples of bot commands including reminders, pins and feedback. ",
-    "links": [
+    ],
+    "sections": [
       {
-        "linkName": "GitHub",
-        "url": "https://www.github.com/naeayedea/keith"
-      }
-    ]
-
-  },  {
-    "title": "Simple Linux Shell (2020)",
-    "content": "As part of the class Computer Systems in Architecture during second year of my course, I was tasked with implementing a simple linux shell in an effort to achieve an appreciation for operating systems and the way users interact with them. \n\n The shell was written from scratch in C and had to meet a specification from our lecturer; features had to include: persistent history and aliases, history invocations, changing working directory, executing external commands and handling erroneous user input gracefully. \n\n This project gave me a deeper understanding of the C programming language, particularly with memory management whilst also allowing me to become more familiar with handling user input in an evolution of my work with the discord bot. Unfortunately the source code for the project is kept privately on a university instance of gitlab but it can be shared as part of my portfolio on request. ",
-    "image": "/images/shell.png",
-    "alt": "Examples of linux shell features such as aliases, running external commands and history invocations",
-    "links": [
-
-    ]
-  },  {
-    "title": "Web Design using React (2021 - present)",
-    "content": "In my third year of university I chose to enroll in an additional class outside of my required credit count as I find web development extremely interesting and satisfying. The class 'Web Applications Development' taught by Mark Dunlop exposed me to many languages and frameworks such as PHP, Javascript and React.js in addition to techniques and concerns such as responsive design, usability and security. \n\n When creating my final project, I was attracted to React as I appreciated the ability to create responsive websites with easy component reuse, something I found more tedious when using vanilla PHP. Over several weeks I created the website \"Cara's Art\" which mimics the web store of a fictional artist, Cara. I am very proud of the result and the final product received an almost perfect grade of 97%.\n\n I enjoy writing responsive css, taking great care to ensure that my sites look good on a wide range of devices. I styled the website completely from scratch utilising media queries to provide different layouts depending on the device. You are currently looking at further evidence of my web design work with React, I designed and implemented my portfolio website completely independently with the styling being written from scratch. Feel free to view Cara's Art and look at the source for this website at the following links: ",
-    "image": "/images/webapp.png",
-    "alt": "A screenshot of a website showing a side menu with eight paintings of different styles in a grid layout",
-    "links": [
-      {
-        "linkName": "Site Source Code",
-        "url": "https://www.github.com/naeayedea/portfolio"
+        "title": "Introduction",
+        "content": "Many research labs hold expensive samples which require careful temperature control, or they will expire, causing a loss of time, effort, and money. Equipment used to store these samples often have alarms built-in, but the samples may still degrade if nobody is nearby to hear them. A product which could autonomously monitor unmanned research labs would allow for early detection of problems, potentially saving the samples stored in the equipment, and provide a timeline of failure which may otherwise be missed.\nThe core of this project was to design and implement an alarm system which could automatically detect known alarm signals in an arbitrary recording. This required a recording device (ESP32 (pictured) + simple microphone) equipped with an algorithm that can extract the key characteristics of an audio signal and compare that to what is present in the environment. Upon detecting a signal, the system generates a log with enough information to create a timeline of failure for the device that triggered the alarm; and contact the responsible user(s) to indicate that an alarm has been detected.",
+        "image": "/portfolio/images/alarm-system/esp32.png",
+        "links": []
       },
       {
-        "linkName": "Cara's Art",
-        "url": "https://devweb2021.cis.strath.ac.uk/ylb17138-nodejs/"
+        "title": "Detection Algorithm",
+        "content": "I implemented a custom audio detection algorithm designed to effectively detect the presence of a known (but arbitrary) audio signal, even in the presence of other audio sources/noise. This algorithm involved storing a vector of audio characteristics gathered from an FFT of the audio signal, I used my knowledge of signals to extract this key information from the source audio file which then allowed the microcontroller to perform the same calculations against environmental noise to check for similarity.\nIf a recording was considered to be similar enough, and the signal was detected in N subsequent time periods, then an alarm was detected, The device then contacted the central alarm system to notify of an alarm event, and also transmitted the last audio buffer it had stored to allow the user to rule out any false positives.\nThe image shows an example of a stored FFT vs the environment, whilst this was an extremely loud audio signal for dramatic effect, the power of matching signal characteristics to a known audio signal is obvious.",
+        "image": "/portfolio/images/alarm-system/fft.png",
+        "links": [],
+        "imageLeft": true
+      },
+      {
+        "title": "Service Implementation",
+        "content": "The central server is the true core of the alarm system, whilst the devices are essential for the detection of alarms, without the server there would be nowhere to store the information and users would have a tough time retrieving and analysing the data. Accessed through an API, the server is solely responsible for the business logic of the system, i.e., storage of critical information, access control, communication policies, user accounts, and authentication. This logic is what converts the solution to a true service which could feasibly be used in a real-world environment.\nThe server exposes a rich API which allows for a wide range of functionality such as: altering and viewing device configuration; retrieving logs; and providing control information such as remotely restarting devices. I implemented this using the ExpressJS framework which allowed for quickly getting the infrastructure off of the ground through the use of existing middleware.",
+        "image": "/portfolio/images/alarm-system/alarm-log.png",
+        "links": []
+      },
+      {
+        "title": "Outcome",
+        "content": "This project was a success, and I received positive feedback from my assessors and supervisor with a grade of 86%. I was able to demonstrate that my detection algorithm was 99% accurate as long as enough of the audio signal was stronger than the environmental noise.\nI thoroughly enjoyed tackling this challenge and think it demonstrates my ability to breakdown problems into well defined tasks which then allows me to provide robust and novel solutions.\nI also identified several avenues of future work including polishing the product for market use, increasing the number of audio signals that can be stored/detected by a single device, and implementing additional detection algorithms including machine learning.",
+        "image": "/portfolio/images/alarm-system/alarm-notification.png",
+        "links": [],
+        "imageLeft": true
       }
     ]
-  },  {
-    "title": "Haskell CSV Query Language (2021)",
-    "content": "I am extremely passionate about programming and I love learning new and interesting ways to write software. In third year, I had the option of choosing the class 'Functional Programming' which involved creating a CSV query language over several months after becoming familiar with Haskell concepts.\n\nI was supplied with an incomplete system that defined various parsers and empty functions. I chose to expand this system to take on an SQL-like syntax where the user could input a query and the system would evaluate it and return the results.\n\nExample queries are shown in the image, my final submission received respectable marks due to my custom testing framework and complete documentation.",
-    "image": "/images/haskell.png",
-    "alt": "Results from running a csv query from the project showing features that the final product had",
-    "links": [
+  },
+  {
+    "title": "Dynamic Ad-Hoc Licensing for Private 5G Networks (2024)",
+    "subTitle": "Masters Project | React/Java/Spring Boot/MySQL/Python",
+    "details": "An end-to-end system designed to control the radio spectrum over a distributed geographic area. Primarily aimed at private 5G networks",
+    "thumbnail": "/portfolio/images/licensing-system/ofcom-shared-access-examples.png",
+    "alt": "Placeholder Image",
+    "path": "/projects/5g-dynamic-licensing-system",
+    "carouselImages":  [
 
+    ],
+    "sections": [
+      {
+        "title": "Introduction",
+        "content": "All radio communications in the UK must be licensed and operating within the constraints and legal  limits defined by the communications regulator, Ofcom. In 2019, Ofcom introduced a new framework for shared spectrum access known as the Shared Access licence which offers up to 400 MHz of 5G suitable spectrum for private individuals and organisations to reserve in a limited geographic area.\nWhilst this is a significant step forward, our team recognised that are some flaws in the system including response times of several weeks, no recourse for interference, and a confusing application process. We set out to fix these issues over the course of six months.\nA critical feature that we wanted to support was \"sub-netting\" spectrum. For example, if our university was responsible for 60 MHz they could then sub-license their allocation to departments on campus. This process could be applied at any aggregation such as continents, nations, local authorities, etc. ",
+        "image": "/portfolio/images/licensing-system/spectrum-potential.png",
+        "links": [],
+        "imageLeft": true
+      },
+      {
+        "title": "My Role",
+        "content": "My role in this product was the primary developer on the backend systems, I was responsible for ensuring our API met the requirements of the customer (our industry partner) whilst also ensuring that all features of the existing application process such as geographical exclusions were maintained.\nI designed the system from the ground up and came up with a novel approach to spectrum management that can theoretically manage an infinite geographical area through the use of Geographical Information System data and intelligent processing algorithms\nMy favourite feature is the decision chaining process which allows the system to process each application in stages, with a \"negative\" and a \"positive\" flow. The system first rules out any reasons why it *cannot* give out a license, and then it greedily tries to find a reason why it *can* give a license to reduce the amount of processing time required. For example, a license in a rural area with no-one for 50 miles requires less checks than a license in central London I truly enjoyed solving problems for this project as its an interesting problem space with ample room for innovation.",
+        "image": "/portfolio/images/licensing-system/licensing-system.png",
+        "links": []
+      },
+      {
+        "title": "Spectrum Control",
+        "content": "In the context of the licensing system, concurrency was used to process more than one application at a time, which would be an essential feature if the system was deployed by Ofcom and shared access licences saw an increased demand. Therefore, there had to  be robust concurrency protections in place to prevent two licences from being assigned the same spectrum if they are within interfering distance of each other. These checks are performed at significant stages of the decision process known as \"critical sections\".\nAn example of such control is shown in the image, which demonstrates a scenario where five applications were placed for the same frequency range (product) at the exact same latitude and longitude. It is easy to see that the system recognizes this as a problem and only processes each product in a configurable radius one at a time. However, if a request came outside of this radius then the system would process both simultaneously. You can also see from the logs that each application received a unique allocation within the specified geographical area without any conflicting licenses. This was an essential quality the system had to demonstrate to be considered suitable.",
+        "image": "/portfolio/images/licensing-system/licensing-system-log-output.png",
+        "links": []
+      },
+      {
+        "title": "Outcome",
+        "content": "The developed system was shown to be a viable solution to the described problem with all objectives fully satisfied. The system was found to be novel due to the high degree ofconfigurability that is offered by the spectrum management component in that the system can feasibly be recursively deployed by lower tiers of users to manage their own licence internally, such as a university sublicensing its spectrum allocations to various departments. This licensing system also received positive feedback when presented to Ofcom for its thorough implementation and flexibility.\nIf I was allowed more time to refine this project I would have worked on the scalability of the system through the use of distributed consensus algorithms to allow N number of license processing servers to communicate globally, this could be enhanced by geographical clustering to allow the system to locally ensure no license collisions whilst eventually achieving a global truth.",
+        "image": "/portfolio/images/licensing-system/licensing-system-map.png",
+        "links": [],
+        "imageLeft": true
+      }
     ]
-  },  {
-    "title": "Java Thread Monitor (2021)",
-    "content": "This simple project was used to gain an appreciation of threading in Java, the tool ran on it's own thread and systematically retrieved information about other threads that were currently active. The thread monitor helped to understand concurrency issues as it was possible for threads to finish execution whilst the tool was retrieving information so synchronisation was important\n\nAs it was a relatively simple task, I choose to focus on the usability aspect of the GUI more, including several hotkeys, filtering by thread or group name and implementing a pause button. The colouring shown in the image was decided by hashing the group name and converting that to RGB values. The colours were then constrained to a luminosity range to ensure readability of the text.\n\nOverall, this project was very fun to undertake as it let me explore both threading and further improve my UX skills.",
-    "image": "/images/threadmonitor.png",
-    "alt": "A screenshot of the thread monitor project with several dummy threads with the base JVM threads shown with various pieces of information",
-    "links": [
+  },
+  {
+    "title": "Tracker App (2025)",
+    "subTitle": "UI | React/NextJS/Tailwind",
+    "details": "A tracker for trackers, After getting bored of downloading apps to track a single data point, I created an app capable of supporting N trackers stored entirely in the browser.",
+    "thumbnail": "/portfolio/images/tracker-app/tracker-example.png",
+    "alt": "A screenshot of another website I created which contains a calendar with data points chosen by the user.",
+    "path": "/projects/tracker-app",
+    "carouselImages":  [
 
+    ],
+    "sections": [
+      {
+        "title": "Summary",
+        "content": "I became annoyed with the number of apps who dedicate themselves to tracking a single, or a handful of metrics. Most of them do the same thing with the only thing changing is the data or labels. I decided to tackle this by implementing a tracker app which can track any number of user defined trackers in a simple to use yet powerful interface. In the interest of privacy I designed the app to use local storage to ensure that people are entirely in control of their own data.\nThis is a relatively new side project of mine and I plan on adding additional features such as local encryption (essentially a local login that decrypts the content from local storage), additional tracker types such as number inputs, and potentially a managed version with support for tracking on multiple devices.",
+        "image": "/portfolio/images/tracker-app/tracker-example.png",
+        "links": [
+          {
+            "linkName": "Try Me",
+            "url": "https://naeayedea.github.io/tracker-app"
+          },
+          {
+            "linkName": "Source Code",
+            "url": "https://www.github.com/naeayedea/tracker-app"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Web Design using React (2021 - present)",
+    "details": "A collection of my web design work over the years",
+    "subTitle": "UI/Backend | React/Java/MySQL",
+    "thumbnail": "/portfolio/images/web-design/portfolio.png",
+    "alt": "A screenshot of a website showing a side menu with eight paintings of different styles in a grid layout",
+    "path": "/projects/web-design",
+    "carouselImages":  [
+
+    ],
+    "sections": [
+      {
+        "title": "Portfolio Website",
+        "content": "I created this website to serve as a showcase of my notable projects and work. It also serves as a good overview of my ability to create easy to use, and most importantly responsive websites. One of my biggest frustrations is websites that do not look good on a wide variety of screens, so I always strive to make my own projects fully responsive.\nI primarily used React 18, React Router 6, and TailwindCSS to create the website you are currently looking at.",
+        "image": "/portfolio/images/web-design/portfolio.png",
+        "links": [
+          {
+            "linkName": "Source Code",
+            "url": "https://www.github.com/naeayedea/portfolio"
+          }
+        ]
+      },
+      {
+        "title": "Tracker Tracker",
+        "content": "I became annoyed with the number of apps who dedicate themselves to tracking a single, or a handful of metrics. Most of them do the same thing with the only thing changing is the data or labels. I decided to tackle this by implementing a tracker app which can track any number of user defined trackers in a simple to use yet powerful interface. I designed this app using ReactJS built with Vite and then deployed using gh-pages as it is a simple static app (for now).\nThis was a really simply yet fun project that let me keep my UI/UX skills up to date whilst creating something I use regularly.",
+        "image": "/portfolio/images/tracker-app/tracker-example.png",
+        "links": [
+          {
+            "linkName": "Further Details",
+            "url": "/projects/tracker-app",
+            "local": true
+          },
+          {
+            "linkName": "Website",
+            "url": "https://naeayedea.github.io/tracker-app",
+            "local": false
+          }
+        ],
+        "imageLeft": true
+      },
+      {
+        "title": "Cara's Art",
+        "content": "In my third year of university I chose to enroll in an additional class outside of my required credit count as I find web development extremely interesting and satisfying. The class 'Web Applications Development' taught by Mark Dunlop exposed me to many languages and frameworks such as PHP, Javascript and React.js in addition to techniques and concerns such as responsive design, usability and security. \n\n When creating my final project, I was attracted to React as I appreciated the ability to create responsive websites with easy component reuse, something I found more tedious when using vanilla PHP. Over several weeks I created the website \"Cara's Art\" which mimics the web store of a fictional artist, Cara. I am very proud of the result and the final product received an almost perfect grade of 97%.\n\n I enjoy writing responsive css, taking great care to ensure that my sites look good on a wide range of devices. I styled the website completely from scratch utilising media queries to provide different layouts depending on the device.",
+        "image": "/portfolio/images/web-design/webapp.png",
+        "links": []
+      }
+    ]
+  },
+  {
+    "title": "Discord Bot (2019 - present)",
+    "subTitle": "Backend | Java",
+    "details": "A kitchen-sink discord bot, my first real side project. This project demonstrates my growth as a programmer over time",
+    "thumbnail": "/portfolio/images/keith/keith.png",
+    "alt": "Examples of bot commands including reminders, pins and feedback. ",
+    "path": "/projects/discord-bot",
+    "carouselImages":  [
+
+    ],
+    "sections": [
+      {
+        "title": "Introduction",
+        "content": "Since 2019, I have continued to develop and improve upon a general purpose discord bot. I have used the bot primarily as a method of improving my programming skills and it was first real project that I worked on. The bot code is event driven, utilising an API from the discord endpoint through the popular java-discord library JDA.\n\n Over the years I have built upon the bots functionality both user facing and internally. Currently, the bot can store information such as custom prefixes and user information in a database through custom database code which uses prepared statements for security. To interact with users, it uses a robust and powerful command interface which I have honed over time which allows for various access levels, subcommands and multiple input types such as reaction triggered commands. \n\n This project shows my journey as a software developer from my earliest java programs in 2019 to my latest work, I have preserved each version of keith in its own branch so that its easy to see the difference over the years, all three versions can be found at the github repository below:",
+        "image": "/portfolio/images/keith/keith.png",
+        "links": [
+          {
+            "linkName": "GitHub",
+            "url": "https://www.github.com/naeayedea/keith"
+          }
+        ]
+      },
+      {
+        "title": "Version 1 (August 2020)",
+        "content": "[WORK IN PROGRESS]\n[basic java understanding, still learning, first real java project, lots of bugs]",
+        "image": "/portfolio/images/keith/keithv1.png",
+        "links": [
+          {
+            "linkName": "GitHub",
+            "url": "https://github.com/naeayedea/keith/tree/v1"
+          }
+        ],
+        "imageLeft": true
+      },
+      {
+        "title": "Version 2 (September 2020)",
+        "content": "[WORK IN PROGRESS]\n[quick learner, improved command processor to use map, started considering permissions]",
+        "image": "/portfolio/images/keith/keithv2.png",
+        "links": [
+          {
+            "linkName": "GitHub",
+            "url": "https://github.com/naeayedea/keith/tree/v2"
+          }
+        ],
+        "imageLeft": false
+      },
+      {
+        "title": "Version 3 (2021)",
+        "content": "[WORK IN PROGRESS]\n[powerful command framework, channel commands, rate limiting, prepared statements/database improvements]",
+        "image": "/portfolio/images/keith/keithv3.png",
+        "links": [
+          {
+            "linkName": "GitHub",
+            "url": "https://github.com/naeayedea/keith/tree/v3"
+          }
+        ],
+        "imageLeft": true
+      },
+      {
+        "title": "Version 4 (2024)",
+        "content": "[WORK IN PROGRESS]\n[Spring Boot, Slash Commands, Translations]",
+        "image": "/portfolio/images/keith/keithv4.png",
+        "links": [
+          {
+            "linkName": "GitHub",
+            "url": "https://github.com/naeayedea/keith/tree/v4"
+          }
+        ],
+        "imageLeft": false
+      }
+    ]
+  },
+  {
+    "title": "Embedded C Application (2022)",
+    "subTitle": "Embedded | C",
+    "details": "An embedded C application running on an MSP430 to drive a contactless tachometer circuit",
+    "thumbnail": "/portfolio/images/embedded.png",
+    "alt": "A code listing showing an example of an interrupt service routine used within the embedded microcontroller code",
+    "path": "/projects/embedded-c-application",
+    "carouselImages":  [
+
+    ],
+    "sections": [
+      {
+        "title": "Introduction",
+        "content": "For the purposes of completing my degree, I took part in a group project to come up with, design and implement a hardware and software system that could demonstrate a key engineering principle. As a group we decided upon a simple tachometer which could demonstrate principles of measurement and control theory.\n\nI was responsible for the firmware in the project which received input from the PCB and converted the signals into a readable RPM for the user. I implemented a serial bluetooth command handler which stored characters in an array and utilised a map of strings to void function pointers which were ran when the correct string was received. The code for this ISR can be found in the image.\n\nThe firmware was relatively complex, needing to take into account the slow clock speed of the processor which was particularly interesting as the code had to be as efficient as possible to ensure rapid response times for interrupts whilst constantly supplying an attached mobile application with up to date RPM information. This project improved my understanding of C programming - particularly within low powered embedded systems.",
+        "image": "/portfolio/images/embedded.png",
+        "links": []
+      },
+      {
+        "title": "Hardware",
+        "content": "",
+        "image": "/portfolio/images/embedded.png",
+        "links": [],
+        "imageLeft": true
+      },
+      {
+        "title": "Firmware",
+        "content": "",
+        "image": "/portfolio/images/embedded.png",
+        "links": []
+      }
+    ]
+  },
+  {
+    "title": "Boston Metro System (2022)",
+    "subTitle": "UI/Backend | JavaFX/Java",
+    "details": "A train-network frontend with support for routing between stations. Driven by Dijkstra's Algorithm",
+    "thumbnail": "/portfolio/images/bostonmetro.png",
+    "alt": "Display of GUI depicting the Boston Metro System as part of the group project. There is a map of the system with a clock and route information",
+    "path": "/projects/boston-metro-system",
+    "carouselImages":  [
+
+    ],
+    "sections": [
+      {
+        "title": "Overview",
+        "content": "For this group project we were tasked with modelling the boston metro system with a backend that utilised a MultiGraph whilst abstracting specifics of the implementation through an API with a strict specification which was used by the GUI shown in the image.\n\nI was fully responsible for specifying, implementing and testing the MultiGraph code to a high quality which received excellent feedback from teaching staff. I made proper use of interface, generics and inheritance to produce a robust implementation which the rest of the system relied on.\n\nOverall, this project was a very enjoyable experience and I feel that I was able to make a full use of my programming skills, particularly with algorithms and utilising functional aspects of Java. You can view the javadocs for the final project at the following link:  ",
+        "image": "/portfolio/images/bostonmetro.png",
+        "links": []
+      },
+      {
+        "title": "MultiGraph Implementation",
+        "content": "[WORK IN PROGRESS]",
+        "image": "/portfolio/images/bostonmetro.png",
+        "links": [],
+        "imageLeft": true
+      },
+      {
+        "title": "UI (JavaFX)",
+        "content": "[WORK IN PROGRESS]",
+        "image": "/portfolio/images/bostonmetro.png",
+        "links": []
+      }
+    ]
+  },
+  {
+    "title": "Simple Linux Shell (2020)",
+    "subTitle": "CLI Application | C",
+    "details": "A simple unix shell written in C, supports built in and custom commands",
+    "thumbnail": "/portfolio/images/shell.png",
+    "alt": "Examples of linux shell features such as aliases, running external commands and history invocations",
+    "path": "/projects/simple-linux-shell",
+    "carouselImages":  [
+
+    ],
+    "sections": [
+      {
+        "title": "TITLE",
+        "content": "As part of the class Computer Systems in Architecture during second year of my course, I was tasked with implementing a simple linux shell in an effort to achieve an appreciation for operating systems and the way users interact with them. \n\n The shell was written from scratch in C and had to meet a specification from our lecturer; features had to include: persistent history and aliases, history invocations, changing working directory, executing external commands and handling erroneous user input gracefully. \n\n This project gave me a deeper understanding of the C programming language, particularly with memory management whilst also allowing me to become more familiar with handling user input in an evolution of my work with the discord bot. Unfortunately the source code for the project is kept privately on a university instance of gitlab but it can be shared as part of my portfolio on request.",
+        "image": "/portfolio/images/shell.png",
+        "links": []
+      }
+    ]
+  },
+  {
+    "title": "Haskell CSV Query Language (2021)",
+    "subTitle": "CLI Application | Haskell",
+    "details": "A command line CSV query language implementation written in Haskell",
+    "thumbnail": "/portfolio/images/haskell.png",
+    "alt": "Results from running a csv query from the project showing features that the final product had",
+    "path": "/projects/haskell-csv-query-language",
+    "carouselImages":  [
+
+    ],
+    "sections": [
+      {
+        "title": "Summary",
+        "content": "I am extremely passionate about programming and I love learning new and interesting ways to write software. In third year, I had the option of choosing the class 'Functional Programming' which involved creating a CSV query language over several months after becoming familiar with Haskell concepts.\n\nI was supplied with an incomplete system that defined various parsers and empty functions. I chose to expand this system to take on an SQL-like syntax where the user could input a query and the system would evaluate it and return the results.\n\nExample queries are shown in the image, my final submission received respectable marks due to my custom testing framework and complete documentation.",
+        "image": "/portfolio/images/haskell.png",
+        "links": []
+      }
     ]
   }
 ]
