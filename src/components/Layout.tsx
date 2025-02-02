@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import {useScrollContext} from "../contexts/ScrollContext";
@@ -8,20 +8,31 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     const { scrollPositions, setScrollPosition } = useScrollContext();
     const location = useLocation();
     const mainRef = useRef<HTMLDivElement>(null);
-
+    const [timer, setTimer] = useState<NodeJS.Timeout | null>(null);
 
     useEffect(() => {
         const savedPosition = scrollPositions[location.pathname] || 0;
+
         if (mainRef.current) {
             mainRef.current.scrollTop = savedPosition;
         }
+    }, [scrollPositions, location.pathname]);
 
-        const handleScroll = () => {
-            if (mainRef.current) {
-                setScrollPosition(location.pathname, mainRef.current.scrollTop);
+    const handleScroll = () => {
+        if (mainRef.current) {
+
+            if (timer !== null) {
+                clearTimeout(timer);
             }
-        };
 
+            const currentScrollPosition = mainRef.current.scrollTop
+            const path = location.pathname
+
+            setTimer(setTimeout(() => setScrollPosition(path, currentScrollPosition), 200));
+        }
+    }
+
+    useEffect(() => {
         const currentMainRef = mainRef.current;
 
         if (currentMainRef) {
@@ -32,8 +43,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             if (currentMainRef) {
                 currentMainRef.removeEventListener('scroll', handleScroll);
             }
+
+            if (timer != null) {
+                clearTimeout(timer)
+            }
         };
-    }, [location.pathname, scrollPositions, setScrollPosition]);
+    }, [handleScroll, setScrollPosition]);
 
     return (
         <div className="flex flex-col w-svw h-svh overflow-hidden">
